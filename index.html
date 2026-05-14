@@ -1,38 +1,71 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang=”de”>
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset=”UTF-8”/>
+<meta name=”viewport” content=”width=device-width,initial-scale=1”/>
 <title>Claude Code Skills</title>
 <style>
+/* ── Themes ─────────────────────────────────────────────────────────────── */
+:root{
+  --bg:#0f0f0f;--bg-side:#0a0a0a;--bg-card:#111111;--bg-pill:#1a1a1a;--bg-input:#1a1a1a;
+  --bg-nav-h:#141414;--bg-nav-a:#1c1c1c;
+  --bd:#1e1e1e;--bd-pill:#252525;--bd-input:#2e2e2e;--bd-input-f:#555;
+  --tx:#e0e0e0;--tx-h1:#ffffff;--tx-meta:#444;--tx-pill:#555;--tx-pill-b:#ccc;
+  --tx-nav-hd:#333;--tx-nav:#555;--tx-nav-h:#bbb;--tx-nav-a:#ddd;--tx-nav-cnt:#333;
+  --tx-cat:#444;--tx-name:#e0e0e0;--tx-desc:#555;--tx-none:#444;--ph:#3a3a3a;
+  --tb-bg:#1a1a1a;--tb-bd:#2e2e2e;--tb-tx:#666;--tb-tx-h:#bbb;
+}
+:root.light{
+  --bg:#f7f7f7;--bg-side:#efefef;--bg-card:#ffffff;--bg-pill:#ffffff;--bg-input:#ffffff;
+  --bg-nav-h:#e6e6e6;--bg-nav-a:#dcdcdc;
+  --bd:#e4e4e4;--bd-pill:#e0e0e0;--bd-input:#d4d4d4;--bd-input-f:#999;
+  --tx:#1a1a1a;--tx-h1:#000000;--tx-meta:#999;--tx-pill:#666;--tx-pill-b:#111;
+  --tx-nav-hd:#aaa;--tx-nav:#777;--tx-nav-h:#222;--tx-nav-a:#111;--tx-nav-cnt:#aaa;
+  --tx-cat:#999;--tx-name:#111;--tx-desc:#777;--tx-none:#bbb;--ph:#bbb;
+  --tb-bg:#ffffff;--tb-bd:#d4d4d4;--tb-tx:#888;--tb-tx-h:#333;
+}
+/* ── Layout ─────────────────────────────────────────────────────────────── */
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0f0f0f;color:#e0e0e0;display:grid;grid-template-columns:220px 1fr;min-height:100vh}
-aside{position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem 1rem;border-right:1px solid #1a1a1a;background:#0a0a0a}
-aside h2{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#333;margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid #1a1a1a}
-.nav-link{display:flex;justify-content:space-between;align-items:center;padding:.28rem .5rem;border-radius:5px;font-size:.72rem;color:#555;text-decoration:none;transition:background .1s,color .1s;margin-bottom:.1rem}
-.nav-link:hover{background:#141414;color:#bbb}
-.nav-link.active{background:#161616;color:#ddd}
-.nav-cnt{font-size:.65rem;color:#333;font-variant-numeric:tabular-nums}
+html{transition:background .2s}
+body{font-family:-apple-system,BlinkMacSystemFont,”Segoe UI”,sans-serif;background:var(--bg);color:var(--tx);display:grid;grid-template-columns:220px 1fr;min-height:100vh;transition:background .2s,color .2s}
+aside{position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem 1rem;border-right:1px solid var(--bd);background:var(--bg-side);transition:background .2s,border-color .2s}
+aside h2{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-nav-hd);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
+.nav-link{display:flex;justify-content:space-between;align-items:center;padding:.28rem .5rem;border-radius:5px;font-size:.72rem;color:var(--tx-nav);text-decoration:none;transition:background .12s,color .12s;margin-bottom:.1rem}
+.nav-link:hover{background:var(--bg-nav-h);color:var(--tx-nav-h)}
+.nav-link.active{background:var(--bg-nav-a);color:var(--tx-nav-a)}
+.nav-cnt{font-size:.65rem;color:var(--tx-nav-cnt);font-variant-numeric:tabular-nums}
 main{padding:2rem;max-width:1200px}
-h1{font-size:1.45rem;font-weight:600;color:#fff;margin-bottom:.2rem}
-.meta{color:#444;font-size:.75rem;margin-bottom:1.25rem}
+h1{font-size:1.45rem;font-weight:600;color:var(--tx-h1);margin-bottom:.2rem}
+.meta{color:var(--tx-meta);font-size:.75rem;margin-bottom:1.25rem}
 .bar{display:flex;align-items:center;gap:.75rem;margin-bottom:1.75rem;flex-wrap:wrap}
-.stat{background:#1a1a1a;border:1px solid #252525;border-radius:7px;padding:.35rem .85rem;font-size:.78rem;color:#555}
-.stat b{color:#ccc}
-#q{flex:1;min-width:200px;max-width:420px;padding:.55rem .95rem;background:#1a1a1a;border:1px solid #2e2e2e;border-radius:7px;color:#e0e0e0;font-size:.88rem;outline:none}
-#q:focus{border-color:#444}
-#q::placeholder{color:#3a3a3a}
+.stat{background:var(--bg-pill);border:1px solid var(--bd-pill);border-radius:7px;padding:.35rem .85rem;font-size:.78rem;color:var(--tx-pill);transition:background .2s,border-color .2s}
+.stat b{color:var(--tx-pill-b)}
+#q{flex:1;min-width:180px;max-width:400px;padding:.55rem .95rem;background:var(--bg-input);border:1px solid var(--bd-input);border-radius:7px;color:var(--tx);font-size:.88rem;outline:none;transition:background .2s,border-color .2s,color .2s}
+#q:focus{border-color:var(--bd-input-f)}
+#q::placeholder{color:var(--ph)}
+/* ── Theme toggle button ─────────────────────────────────────────────────── */
+#tb{margin-left:auto;padding:.45rem .7rem;background:var(--tb-bg);border:1px solid var(--tb-bd);border-radius:7px;color:var(--tb-tx);font-size:.85rem;cursor:pointer;line-height:1;transition:background .2s,border-color .2s,color .15s}
+#tb:hover{color:var(--tb-tx-h);border-color:var(--bd-input-f)}
+/* ── Categories & cards ─────────────────────────────────────────────────── */
 .category{margin-bottom:2.25rem;scroll-margin-top:1.5rem}
-.cat-title{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#444;margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid #1a1a1a}
+.cat-title{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-cat);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.5rem}
-.card{background:#111;border:1px solid #1c1c1c;border-radius:7px;padding:.7rem .95rem;transition:border-color .12s}
-.card:hover{border-color:#2e2e2e}
-.n{font-family:"SF Mono","Fira Code",monospace;font-size:.83rem;font-weight:600;color:#e0e0e0;margin-bottom:.28rem}
-.d{font-size:.72rem;color:#555;line-height:1.45}
+.card{background:var(--bg-card);border:1px solid var(--bd);border-radius:7px;padding:.7rem .95rem;transition:border-color .12s,background .2s}
+.card:hover{border-color:var(--bd-input)}
+.n{font-family:”SF Mono”,”Fira Code”,monospace;font-size:.83rem;font-weight:600;color:var(--tx-name);margin-bottom:.28rem}
+.d{font-size:.72rem;color:var(--tx-desc);line-height:1.45}
 .hidden{display:none!important}
-#none{color:#333;font-size:.85rem;padding:.75rem 0}
+#none{color:var(--tx-none);font-size:.85rem;padding:.75rem 0}
 @media(max-width:700px){body{grid-template-columns:1fr}aside{display:none}}
 </style>
+<script>
+// Apply theme before first paint to avoid flash
+(function(){
+  const s=localStorage.getItem('skills-theme');
+  const preferLight=window.matchMedia('(prefers-color-scheme: light)').matches;
+  if(s==='light'||(s===null&&preferLight))document.documentElement.classList.add('light');
+})();
+</script>
 </head>
 <body>
 <aside>
@@ -57,13 +90,14 @@ h1{font-size:1.45rem;font-weight:600;color:#fff;margin-bottom:.2rem}
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 14.05.2026 11:10 · Auto-generiert aus ~/.claude/skills/</p>
-<div class="bar">
-  <div class="stat">Skills: <b id="cnt">162</b></div>
-  <div class="stat">Kategorien: <b>16</b></div>
-  <input id="q" type="text" placeholder="Skill suchen …" oninput="f()"/>
+<p class=”meta”>Aktualisiert: 14.05.2026 21:43 · Auto-generiert aus ~/.claude/skills/</p>
+<div class=”bar”>
+  <div class=”stat”>Skills: <b id=”cnt”>162</b></div>
+  <div class=”stat”>Kategorien: <b>16</b></div>
+  <input id=”q” type=”text” placeholder=”Skill suchen …” oninput=”f()”/>
+  <button id=”tb” onclick=”toggleTheme()” title=”Hell/Dunkel wechseln”>☀</button>
 </div>
-<div id="cats">
+<div id=”cats”>
 <div class="category" id="c-ui-ux-design" data-cat>
 <div class="cat-title">UI/UX Design</div>
 <div class="grid"><div class="card"><div class="n">/brand-systems</div><div class="d">Umfassende Brand-Identity-Systeme: Logo, Farben, Typografie, von Strategie bis Implementierung.</div></div>
@@ -292,9 +326,17 @@ h1{font-size:1.45rem;font-weight:600;color:#fff;margin-bottom:.2rem}
 </div>
 
 </div>
-<p id="none" style="display:none"></p>
+<p id=”none” style=”display:none”></p>
 </main>
 <script>
+function setBtn(light){document.getElementById('tb').textContent=light?'☾':'☀';}
+setBtn(document.documentElement.classList.contains('light'));
+
+function toggleTheme(){
+  const light=document.documentElement.classList.toggle('light');
+  localStorage.setItem('skills-theme',light?'light':'dark');
+  setBtn(light);
+}
 function f(){
   const q=document.getElementById('q').value.toLowerCase();
   let n=0;
@@ -311,12 +353,11 @@ function f(){
   document.getElementById('cnt').textContent=n||(q?0:162);
   const el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
-  if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
+  if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'”';
 }
-// Sidebar active state on scroll
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    const a=document.querySelector('a[href="#'+e.target.id+'"]');
+    const a=document.querySelector('a[href=”#'+e.target.id+'”]');
     if(a)a.classList.toggle('active',e.isIntersecting);
   });
 },{threshold:.15});
