@@ -162,14 +162,14 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">17</span></a>
 <a href="#c-netzwerk-diagnose" class="nav-link">Netzwerk &amp; Diagnose <span class="nav-cnt">6</span></a>
 <a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">3</span></a>
-<a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">11</span></a>
+<a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">12</span></a>
 
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 15.05.2026 13:41 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 15.05.2026 13:44 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">170</b></div>
+  <div class="stat">Skills <b id="cnt">171</b></div>
   <div class="stat">Kategorien <b>16</b></div>
   <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false"/>
   <div class="ts">
@@ -407,6 +407,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <div class="card"><div class="n">/caveman-review</div><div class="d">&gt;</div></div>
 <div class="card"><div class="n">/caveman-stats</div><div class="d">&gt;</div></div>
 <div class="card"><div class="n">/douban-skill</div><div class="d">&gt;</div></div>
+<div class="card"><div class="n">/extract-design</div><div class="d">Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React them</div></div>
 <div class="card"><div class="n">/gangtise-copilot</div><div class="d">One-stop installer and companion for the full Gangtise (岗底斯投研) OpenAPI skill suite — 19 official skills covering data retrieval (OHLC 行情, 财务, 估值, 研报, 首席观点, 会议纪要</div></div>
 <div class="card"><div class="n">/ima-copilot</div><div class="d">One-stop companion and installer for the official Tencent IMA skill (腾讯 IMA / ima.qq.com). Handles zero-config installation to Claude Code / Codex / OpenClaw vi</div></div>
 <div class="card"><div class="n">/website-builder-setup</div><div class="d">Install the full AI website builder stack — UI/UX Pro Max, Framer Motion animations, and 21st.dev components. One skill, three tools, zero coding experience nee</div></div>
@@ -434,7 +435,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:170);
+  document.getElementById('cnt').textContent=n||(q?0:171);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
