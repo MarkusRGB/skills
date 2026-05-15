@@ -1,69 +1,146 @@
 <!DOCTYPE html>
-<html lang=”de”>
+<html lang="de">
 <head>
-<meta charset=”UTF-8”/>
-<meta name=”viewport” content=”width=device-width,initial-scale=1”/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Claude Code Skills</title>
 <style>
-/* ── Themes ─────────────────────────────────────────────────────────────── */
+/* ── Design tokens ── */
 :root{
-  --bg:#0f0f0f;--bg-side:#0a0a0a;--bg-card:#111111;--bg-pill:#1a1a1a;--bg-input:#1a1a1a;
-  --bg-nav-h:#141414;--bg-nav-a:#1c1c1c;
-  --bd:#1e1e1e;--bd-pill:#252525;--bd-input:#2e2e2e;--bd-input-f:#555;
-  --tx:#e0e0e0;--tx-h1:#ffffff;--tx-meta:#444;--tx-pill:#555;--tx-pill-b:#ccc;
-  --tx-nav-hd:#333;--tx-nav:#555;--tx-nav-h:#bbb;--tx-nav-a:#ddd;--tx-nav-cnt:#333;
-  --tx-cat:#444;--tx-name:#e0e0e0;--tx-desc:#555;--tx-none:#444;--ph:#3a3a3a;
-  --tb-bg:#1a1a1a;--tb-bd:#2e2e2e;--tb-tx:#666;--tb-tx-h:#bbb;
+  --bg:#0d0d0d;--bg-side:#090909;--bg-card:#141414;--bg-input:#121212;--bg-stat:#131313;
+  --bg-nav-h:#181818;--bg-nav-a:#1e1e1e;--bg-seg:#141414;--bg-seg-a:#232323;
+  --bd:#1e1e1e;--bd-h:#2c2c2c;--bd-in:#242424;--bd-inf:#505050;--bd-stat:#1e1e1e;
+  --tx:#c0c0c0;--tx-h1:#eeeeee;--tx-meta:#383838;
+  --tx-stat:#484848;--tx-stat-b:#b8b8b8;
+  --tx-nav-hd:#242424;--tx-nav:#3c3c3c;--tx-nav-h:#989898;--tx-nav-a:#cccccc;--tx-nav-cnt:#282828;
+  --tx-cat:#303030;--tx-name:#dcdcdc;--tx-desc:#484848;--tx-none:#343434;
+  --tx-seg:#484848;--tx-seg-a:#d4d4d4;
+  --ph:#2c2c2c;
+  --sh-card:none;
+  --sh-card-h:0 8px 28px rgba(0,0,0,.6);
+  --sh-seg-a:0 1px 4px rgba(0,0,0,.5);
+  --ring:rgba(255,255,255,.05);
+  --ease-ui:cubic-bezier(0.23,1,0.32,1);
 }
 :root.light{
-  --bg:#f7f7f7;--bg-side:#efefef;--bg-card:#ffffff;--bg-pill:#ffffff;--bg-input:#ffffff;
-  --bg-nav-h:#e6e6e6;--bg-nav-a:#dcdcdc;
-  --bd:#e4e4e4;--bd-pill:#e0e0e0;--bd-input:#d4d4d4;--bd-input-f:#999;
-  --tx:#1a1a1a;--tx-h1:#000000;--tx-meta:#999;--tx-pill:#666;--tx-pill-b:#111;
-  --tx-nav-hd:#aaa;--tx-nav:#777;--tx-nav-h:#222;--tx-nav-a:#111;--tx-nav-cnt:#aaa;
-  --tx-cat:#999;--tx-name:#111;--tx-desc:#777;--tx-none:#bbb;--ph:#bbb;
-  --tb-bg:#ffffff;--tb-bd:#d4d4d4;--tb-tx:#888;--tb-tx-h:#333;
+  --bg:#f2f2f2;--bg-side:#e8e8e8;--bg-card:#ffffff;--bg-input:#ffffff;--bg-stat:#ffffff;
+  --bg-nav-h:#dedede;--bg-nav-a:#d4d4d4;--bg-seg:#e2e2e2;--bg-seg-a:#ffffff;
+  --bd:#dcdcdc;--bd-h:#bfbfbf;--bd-in:#cfcfcf;--bd-inf:#909090;--bd-stat:#dedede;
+  --tx:#1c1c1c;--tx-h1:#080808;--tx-meta:#9c9c9c;
+  --tx-stat:#686868;--tx-stat-b:#0e0e0e;
+  --tx-nav-hd:#adadad;--tx-nav:#7e7e7e;--tx-nav-h:#1e1e1e;--tx-nav-a:#080808;--tx-nav-cnt:#b4b4b4;
+  --tx-cat:#a0a0a0;--tx-name:#101010;--tx-desc:#686868;--tx-none:#bebebe;
+  --tx-seg:#8a8a8a;--tx-seg-a:#0e0e0e;
+  --ph:#bcbcbc;
+  --sh-card:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
+  --sh-card-h:0 8px 24px rgba(0,0,0,.11);
+  --sh-seg-a:0 1px 3px rgba(0,0,0,.14);
+  --ring:rgba(0,0,0,.06);
 }
-/* ── Layout ─────────────────────────────────────────────────────────────── */
-*{box-sizing:border-box;margin:0;padding:0}
-html{transition:background .2s}
-body{font-family:-apple-system,BlinkMacSystemFont,”Segoe UI”,sans-serif;background:var(--bg);color:var(--tx);display:grid;grid-template-columns:220px 1fr;min-height:100vh;transition:background .2s,color .2s}
-aside{position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem 1rem;border-right:1px solid var(--bd);background:var(--bg-side);transition:background .2s,border-color .2s}
-aside h2{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-nav-hd);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
-.nav-link{display:flex;justify-content:space-between;align-items:center;padding:.28rem .5rem;border-radius:5px;font-size:.72rem;color:var(--tx-nav);text-decoration:none;transition:background .12s,color .12s;margin-bottom:.1rem}
-.nav-link:hover{background:var(--bg-nav-h);color:var(--tx-nav-h)}
-.nav-link.active{background:var(--bg-nav-a);color:var(--tx-nav-a)}
-.nav-cnt{font-size:.65rem;color:var(--tx-nav-cnt);font-variant-numeric:tabular-nums}
-main{padding:2rem;max-width:1200px}
-h1{font-size:1.45rem;font-weight:600;color:var(--tx-h1);margin-bottom:.2rem}
-.meta{color:var(--tx-meta);font-size:.75rem;margin-bottom:1.25rem}
-.bar{display:flex;align-items:center;gap:.75rem;margin-bottom:1.75rem;flex-wrap:wrap}
-.stat{background:var(--bg-pill);border:1px solid var(--bd-pill);border-radius:7px;padding:.35rem .85rem;font-size:.78rem;color:var(--tx-pill);transition:background .2s,border-color .2s}
-.stat b{color:var(--tx-pill-b)}
-#q{flex:1;min-width:180px;max-width:400px;padding:.55rem .95rem;background:var(--bg-input);border:1px solid var(--bd-input);border-radius:7px;color:var(--tx);font-size:.88rem;outline:none;transition:background .2s,border-color .2s,color .2s}
-#q:focus{border-color:var(--bd-input-f)}
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
+  background:var(--bg);color:var(--tx);
+  display:grid;grid-template-columns:220px 1fr;min-height:100vh;
+  transition:background .25s ease,color .2s ease;
+}
+/* ── Sidebar ── */
+aside{
+  position:sticky;top:0;height:100vh;overflow-y:auto;overflow-x:hidden;
+  padding:1.5rem .875rem 2rem;border-right:1px solid var(--bd);background:var(--bg-side);
+  transition:background .25s ease,border-color .25s ease;
+  scrollbar-width:thin;scrollbar-color:var(--bd) transparent;
+}
+aside h2{
+  font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tx-nav-hd);margin-bottom:.75rem;padding:0 .375rem .5rem;
+  border-bottom:1px solid var(--bd);
+  transition:color .25s ease,border-color .25s ease;
+}
+.nav-link{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.3rem .375rem;border-radius:5px;font-size:.7rem;color:var(--tx-nav);
+  text-decoration:none;border-left:2px solid transparent;margin-bottom:.05rem;
+  transition:background 130ms ease-out,color 130ms ease-out,
+             transform 160ms var(--ease-ui),border-color 130ms ease-out;
+}
+.nav-link:hover{background:var(--bg-nav-h);color:var(--tx-nav-h);transform:translateX(2px)}
+.nav-link.active{background:var(--bg-nav-a);color:var(--tx-nav-a);border-left-color:var(--tx-nav)}
+.nav-cnt{font-size:.62rem;color:var(--tx-nav-cnt);font-variant-numeric:tabular-nums}
+/* ── Main ── */
+main{padding:2rem 2.5rem;max-width:1180px}
+h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);margin-bottom:.2rem;transition:color .25s ease}
+.meta{color:var(--tx-meta);font-size:.72rem;margin-bottom:1.5rem;transition:color .25s ease}
+/* ── Top bar ── */
+.bar{display:flex;align-items:center;gap:.625rem;margin-bottom:2rem;flex-wrap:wrap}
+.stat{
+  background:var(--bg-stat);border:1px solid var(--bd-stat);border-radius:7px;
+  padding:.35rem .875rem;font-size:.75rem;color:var(--tx-stat);
+  transition:background .25s ease,border-color .25s ease,color .25s ease;
+}
+.stat b{color:var(--tx-stat-b);font-variant-numeric:tabular-nums}
+#q{
+  flex:1;min-width:180px;max-width:380px;padding:.5rem .9rem;
+  background:var(--bg-input);border:1px solid var(--bd-in);border-radius:7px;
+  color:var(--tx);font-size:.85rem;font-family:inherit;outline:none;
+  transition:border-color .15s ease,box-shadow .15s ease,background .25s ease,color .2s ease;
+}
+#q:focus{border-color:var(--bd-inf);box-shadow:0 0 0 3px var(--ring)}
 #q::placeholder{color:var(--ph)}
-/* ── Theme toggle button ─────────────────────────────────────────────────── */
-#tb{margin-left:auto;padding:.45rem .7rem;background:var(--tb-bg);border:1px solid var(--tb-bd);border-radius:7px;color:var(--tb-tx);font-size:.85rem;cursor:pointer;line-height:1;transition:background .2s,border-color .2s,color .15s}
-#tb:hover{color:var(--tb-tx-h);border-color:var(--bd-input-f)}
-/* ── Categories & cards ─────────────────────────────────────────────────── */
+/* ── Segmented theme toggle ── */
+.ts{
+  display:flex;background:var(--bg-seg);border:1px solid var(--bd);
+  border-radius:8px;padding:3px;gap:2px;margin-left:auto;
+  transition:background .25s ease,border-color .25s ease;
+}
+.ts-opt{
+  display:flex;align-items:center;gap:.35rem;padding:.32rem .72rem;
+  border-radius:5px;font-size:.73rem;color:var(--tx-seg);background:none;border:none;
+  cursor:pointer;font-family:inherit;font-weight:500;white-space:nowrap;
+  transition:background 150ms ease-out,color 150ms ease-out,
+             box-shadow 150ms ease-out,transform 100ms ease-out;
+}
+.ts-opt:active{transform:scale(.97)}
+/* CSS-only active state — no JS class juggling needed */
+:root:not(.light) #ts-dark,
+:root.light #ts-light{
+  background:var(--bg-seg-a);color:var(--tx-seg-a);box-shadow:var(--sh-seg-a);
+}
+/* ── Categories ── */
 .category{margin-bottom:2.25rem;scroll-margin-top:1.5rem}
-.cat-title{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-cat);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.5rem}
-.card{background:var(--bg-card);border:1px solid var(--bd);border-radius:7px;padding:.7rem .95rem;transition:border-color .12s,background .2s}
-.card:hover{border-color:var(--bd-input)}
-.n{font-family:”SF Mono”,”Fira Code”,monospace;font-size:.83rem;font-weight:600;color:var(--tx-name);margin-bottom:.28rem}
-.d{font-size:.72rem;color:var(--tx-desc);line-height:1.45}
+.cat-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--tx-cat);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--bd);
+  transition:color .25s ease,border-color .25s ease;
+}
+/* ── Grid & cards ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:.5rem}
+.card{
+  background:var(--bg-card);border:1px solid var(--bd);border-radius:8px;
+  padding:.75rem 1rem;cursor:default;box-shadow:var(--sh-card);
+  transition:transform 160ms var(--ease-ui),box-shadow 160ms var(--ease-ui),
+             border-color 160ms ease-out,background .25s ease;
+}
+.card:hover{transform:translateY(-2px);box-shadow:var(--sh-card-h);border-color:var(--bd-h)}
+.n{
+  font-family:"SF Mono","Fira Code",ui-monospace,monospace;
+  font-size:.8rem;font-weight:600;color:var(--tx-name);margin-bottom:.3rem;
+  transition:color .25s ease;
+}
+.d{font-size:.7rem;color:var(--tx-desc);line-height:1.5;transition:color .25s ease}
+/* ── Utils ── */
 .hidden{display:none!important}
-#none{color:var(--tx-none);font-size:.85rem;padding:.75rem 0}
-@media(max-width:700px){body{grid-template-columns:1fr}aside{display:none}}
+#none{color:var(--tx-none);font-size:.83rem;padding:.75rem 0}
+@media(max-width:700px){body{grid-template-columns:1fr}aside{display:none}main{padding:1.5rem}}
 </style>
 <script>
-// Apply theme before first paint to avoid flash
+/* Apply theme before paint — prevents flash */
 (function(){
-  const s=localStorage.getItem('skills-theme');
-  const preferLight=window.matchMedia('(prefers-color-scheme: light)').matches;
-  if(s==='light'||(s===null&&preferLight))document.documentElement.classList.add('light');
+  var s=localStorage.getItem('skills-theme');
+  var p=window.matchMedia('(prefers-color-scheme: light)').matches;
+  if(s==='light'||(s===null&&p))document.documentElement.classList.add('light');
 })();
 </script>
 </head>
@@ -90,14 +167,17 @@ h1{font-size:1.45rem;font-weight:600;color:var(--tx-h1);margin-bottom:.2rem}
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class=”meta”>Aktualisiert: 14.05.2026 21:43 · Auto-generiert aus ~/.claude/skills/</p>
-<div class=”bar”>
-  <div class=”stat”>Skills: <b id=”cnt”>162</b></div>
-  <div class=”stat”>Kategorien: <b>16</b></div>
-  <input id=”q” type=”text” placeholder=”Skill suchen …” oninput=”f()”/>
-  <button id=”tb” onclick=”toggleTheme()” title=”Hell/Dunkel wechseln”>☀</button>
+<p class="meta">Aktualisiert: 15.05.2026 08:35 · Auto-generiert aus ~/.claude/skills/</p>
+<div class="bar">
+  <div class="stat">Skills <b id="cnt">162</b></div>
+  <div class="stat">Kategorien <b>16</b></div>
+  <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false"/>
+  <div class="ts">
+    <button class="ts-opt" id="ts-dark" onclick="setTheme('dark')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Dunkel</button>
+    <button class="ts-opt" id="ts-light" onclick="setTheme('light')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Hell</button>
+  </div>
 </div>
-<div id=”cats”>
+<div id="cats">
 <div class="category" id="c-ui-ux-design" data-cat>
 <div class="cat-title">UI/UX Design</div>
 <div class="grid"><div class="card"><div class="n">/brand-systems</div><div class="d">Umfassende Brand-Identity-Systeme: Logo, Farben, Typografie, von Strategie bis Implementierung.</div></div>
@@ -326,24 +406,20 @@ h1{font-size:1.45rem;font-weight:600;color:var(--tx-h1);margin-bottom:.2rem}
 </div>
 
 </div>
-<p id=”none” style=”display:none”></p>
+<p id="none" style="display:none"></p>
 </main>
 <script>
-function setBtn(light){document.getElementById('tb').textContent=light?'☾':'☀';}
-setBtn(document.documentElement.classList.contains('light'));
-
-function toggleTheme(){
-  const light=document.documentElement.classList.toggle('light');
-  localStorage.setItem('skills-theme',light?'light':'dark');
-  setBtn(light);
+function setTheme(m){
+  document.documentElement.classList.toggle('light',m==='light');
+  localStorage.setItem('skills-theme',m);
 }
 function f(){
-  const q=document.getElementById('q').value.toLowerCase();
-  let n=0;
-  document.querySelectorAll('[data-cat]').forEach(cat=>{
-    let hit=false;
-    cat.querySelectorAll('.card').forEach(c=>{
-      const ok=!q||c.textContent.toLowerCase().includes(q);
+  var q=document.getElementById('q').value.toLowerCase();
+  var n=0;
+  document.querySelectorAll('[data-cat]').forEach(function(cat){
+    var hit=false;
+    cat.querySelectorAll('.card').forEach(function(c){
+      var ok=!q||c.textContent.toLowerCase().includes(q);
       c.classList.toggle('hidden',!ok);
       if(ok)hit=true;
     });
@@ -351,17 +427,17 @@ function f(){
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
   document.getElementById('cnt').textContent=n||(q?0:162);
-  const el=document.getElementById('none');
+  var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
-  if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'”';
+  if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
 }
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    const a=document.querySelector('a[href=”#'+e.target.id+'”]');
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    var a=document.querySelector('a[href="#'+e.target.id+'"]');
     if(a)a.classList.toggle('active',e.isIntersecting);
   });
 },{threshold:.15});
-document.querySelectorAll('[data-cat]').forEach(el=>obs.observe(el));
+document.querySelectorAll('[data-cat]').forEach(function(el){obs.observe(el);});
 </script>
 </body>
 </html>
