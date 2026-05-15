@@ -162,14 +162,14 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">17</span></a>
 <a href="#c-netzwerk-diagnose" class="nav-link">Netzwerk &amp; Diagnose <span class="nav-cnt">6</span></a>
 <a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">3</span></a>
-<a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">13</span></a>
+<a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">14</span></a>
 
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 15.05.2026 13:46 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 15.05.2026 14:06 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">172</b></div>
+  <div class="stat">Skills <b id="cnt">173</b></div>
   <div class="stat">Kategorien <b>16</b></div>
   <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false"/>
   <div class="ts">
@@ -399,7 +399,8 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 </div>
 <div class="category" id="c-weitere-skills" data-cat>
 <div class="cat-title">Weitere Skills</div>
-<div class="grid"><div class="card"><div class="n">/cavecrew</div><div class="d">&gt;</div></div>
+<div class="grid"><div class="card"><div class="n">/banana</div><div class="d">AI image generation Creative Director powered by Google Gemini Nano Banana models. Use this skill for ANY request involving image creation, editing, visual asse</div></div>
+<div class="card"><div class="n">/cavecrew</div><div class="d">&gt;</div></div>
 <div class="card"><div class="n">/caveman</div><div class="d">&gt;</div></div>
 <div class="card"><div class="n">/caveman-commit</div><div class="d">&gt;</div></div>
 <div class="card"><div class="n">/caveman-compress</div><div class="d">&gt;</div></div>
@@ -436,7 +437,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:172);
+  document.getElementById('cnt').textContent=n||(q?0:173);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
