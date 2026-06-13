@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direktflüge ab Salzburg · 22.–26. August 2026 · checkfelix-Preise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0B2A4A;--ink-2:#16456f;--sky:#1E6FB0;--sun:#F4A024;--sun-soft:#fdf0d8;
+    --paper:#eef2f6;--card:#fff;--line:#dde5ec;--text:#15212c;--muted:#5b6b78;
+    --good:#1f9d6b;--mid:#c79100;--faint:#cdd6de;--hl:#fff7ea;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 20px 64px;}
+  header{background:linear-gradient(135deg,var(--ink) 0%,var(--ink-2) 100%);color:#fff;border-radius:0 0 18px 18px;padding:34px 0 30px;margin-bottom:24px;}
+  .head-inner{max-width:1220px;margin:0 auto;padding:0 20px;}
+  .eyebrow{font-family:"Space Grotesk",sans-serif;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--sun);font-weight:600;margin:0 0 8px;}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(1.6rem,3.4vw,2.5rem);margin:0 0 14px;letter-spacing:-.01em;}
+  .route{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-family:"Space Grotesk",sans-serif;font-size:.95rem;color:#cfe1f2;}
+  .route b{color:#fff;font-weight:600;}.route .dot{color:var(--sun);}
+  .reco{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--sun);border-radius:14px;padding:18px 20px;margin-bottom:22px;}
+  .reco h2{font-family:"Space Grotesk",sans-serif;font-size:1rem;margin:0 0 4px;color:var(--ink);letter-spacing:-.01em;}
+  .reco .sub{font-size:.82rem;color:var(--muted);margin:0 0 14px;}
+  .reco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
+  .reco-card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fbfdff;}
+  .reco-card.win{border-color:#bfe6d4;background:#f1fbf7;}
+  .reco-card .rank{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--sun);font-size:.78rem;}
+  .reco-card.win .rank{color:var(--good);}
+  .reco-card .name{font-weight:600;color:var(--ink);display:block;margin:2px 0 3px;}
+  .reco-card .why{font-size:.79rem;color:var(--muted);}
+  .reco-card .pp{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--text);font-size:1.05rem;margin-top:7px;display:block;}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;}
+  .controls .lbl{font-size:.8rem;color:var(--muted);margin-right:4px;font-weight:500;}
+  .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:.82rem;font-weight:500;padding:7px 14px;border-radius:999px;cursor:pointer;transition:.15s;}
+  .chip:hover{border-color:var(--sky);}.chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .country-row{display:flex;align-items:center;gap:8px;margin:0 0 16px;}
+  select{font:inherit;font-size:.85rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 30px 7px 12px;cursor:pointer;-webkit-appearance:none;appearance:none;
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%235b6b78' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 11px center;}
+  select:hover{border-color:var(--sky);}
+  .tablecard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .scroller{overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;min-width:960px;}
+  thead th{background:#f4f7fa;font-family:"Space Grotesk",sans-serif;font-weight:600;text-align:left;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:13px 14px;border-bottom:2px solid var(--line);position:sticky;top:0;}
+  tbody td{padding:12px 14px;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:top;}
+  tbody tr:last-child td{border-bottom:none;}tbody tr:hover{background:#f8fbfd;}
+  tr.hl{background:var(--hl);}tr.hl:hover{background:#fff2dc;}
+  .dest{font-weight:600;color:var(--ink);font-size:.95rem;}
+  .country{display:block;font-size:.74rem;color:var(--muted);font-weight:500;margin-top:1px;}
+  .toptip{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9a6200;background:var(--sun-soft);border:1px solid #f0d49a;border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:middle;}
+  .dates{font-family:"Space Grotesk",sans-serif;font-size:.85rem;white-space:nowrap;}
+  .dates .alt{display:block;color:var(--muted);font-size:.78rem;margin-top:2px;}
+  .airline{font-size:.85rem;}.ew{color:var(--sky);font-weight:600;}
+  .valid{font-size:.82rem;color:var(--muted);white-space:nowrap;}
+  .tag{display:inline-block;font-size:.7rem;font-weight:600;padding:3px 9px;border-radius:6px;white-space:nowrap;}
+  .t-beach{background:#e3f3ef;color:#127a54;}.t-island{background:#e0eefb;color:#1763a8;}
+  .t-city{background:#eee6f6;color:#6b3fa0;}.t-road{background:var(--sun-soft);color:#9a6200;}
+  .rt{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.9rem;letter-spacing:1px;}
+  .rt .on{color:var(--sun);}.rt .off{color:var(--faint);}
+  .rt-note{display:block;font-size:.76rem;color:var(--muted);font-weight:400;letter-spacing:0;margin-top:3px;}
+  .price{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1rem;white-space:nowrap;}
+  .p1{color:var(--good);}.p2{color:var(--mid);}.p3{color:#c0502a;}
+  .price small{display:block;font-weight:400;font-size:.72rem;color:var(--muted);font-family:"Inter",sans-serif;white-space:normal;margin-top:2px;}
+  .conf{display:inline-block;font-size:.62rem;font-weight:600;padding:1px 5px;border-radius:4px;vertical-align:middle;}
+  .c-live{background:#e3f3ef;color:#127a54;}.c-cf{background:#e6eefc;color:#2456b8;}
+  .c-ew{background:#e0f0fb;color:#1763a8;}.c-est{background:#f0f2f5;color:#7a8794;}
+  .notes{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
+  .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--sun);border-radius:10px;padding:15px 17px;}
+  .note h3{font-family:"Space Grotesk",sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px;color:var(--ink);}
+  .note p{margin:0;font-size:.85rem;color:var(--muted);}.note p+p{margin-top:7px;}.note b{color:var(--text);}
+  footer{margin-top:24px;font-size:.76rem;color:var(--muted);text-align:center;}
+  .hidden{display:none;}
+</style>
+</head>
+<body>
+  <header>
+    <div class="head-inner">
+      <p class="eyebrow">Salzburg Airport · Sommer 2026 · checkfelix-Preise</p>
+      <h1>Direktflüge: Preise &amp; Priorisierung</h1>
+      <div class="route">
+        <span><b>Abflug SZG</b></span><span class="dot">→</span>
+        <span>Fenster <b>Sa 22.&nbsp;– Mi 26.&nbsp;Aug 2026</b></span><span class="dot">·</span>
+        <span><b>≈ 1 Woche</b></span><span class="dot">·</span>
+        <span>Handgepäck <b>+ 1 Koffer</b></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <div class="reco">
+      <h2>Top-Priorität: günstigste Ziele mit echtem Roadtrip-Potenzial</h2>
+      <p class="sub">Konkrete checkfelix-/Live-Werte. Hin + Rück, August.</p>
+      <div class="reco-grid">
+        <div class="reco-card win">
+          <span class="rank">① Bestwert bestätigt</span>
+          <span class="name">Alicante</span>
+          <span class="why">Costa Blanca, Valencia ★★★ · Live gefunden, inkl. Gepäck</span>
+          <span class="pp">≈ 200 €</span>
+        </div>
+        <div class="reco-card">
+          <span class="rank">② bester Allrounder</span>
+          <span class="name">Rom</span>
+          <span class="why">Latium, Toskana, Umbrien ★★★</span>
+          <span class="pp">≈ 215 €</span>
+        </div>
+        <div class="reco-card">
+          <span class="rank">③ Insel-Rundtour</span>
+          <span class="name">Sardinien · Olbia/Cagliari</span>
+          <span class="why">Costa Smeralda, Strände + Inland ★★★</span>
+          <span class="pp">≈ 160–260 €</span>
+        </div>
+        <div class="reco-card">
+          <span class="rank">④ dein Favorit</span>
+          <span class="name">Barcelona</span>
+          <span class="why">Costa Brava, Katalonien ★★★ · Live bestätigt</span>
+          <span class="pp">≈ 240 €</span>
+        </div>
+      </div>
+      <p style="margin:12px 0 0;font-size:.82rem;color:var(--muted);">Ebenfalls guter Wert: <b style="color:var(--text)">Larnaka/Zypern</b> ≈ 190–250 €. &nbsp; Teurer, aber ★★★ zum Fahren: <b style="color:var(--text)">Kreta</b> ≈ 290 €, griech. Inseln ≈ 270–360 €. &nbsp; ⚠ <b style="color:var(--text)">Korsika</b> ist mit ≈ 400 € die teuerste Inseloption.</p>
+    </div>
+
+    <div class="controls">
+      <span class="lbl">Art:</span>
+      <button class="chip active" data-filter="all">Alle</button>
+      <button class="chip" data-filter="beachisland">Strand &amp; Insel</button>
+      <button class="chip" data-filter="road">Festland-Roadtrip</button>
+      <button class="chip" data-filter="city">Städtetrip</button>
+      <button class="chip" data-filter="top">★ Top für Mietwagen</button>
+    </div>
+    <div class="country-row">
+      <span class="lbl">Land:</span>
+      <select id="countrySel">
+        <option value="all">Alle Länder</option>
+        <option value="bg">Bulgarien</option>
+        <option value="dk">Dänemark</option>
+        <option value="fr">Frankreich</option>
+        <option value="gr">Griechenland</option>
+        <option value="il">Israel</option>
+        <option value="it">Italien</option>
+        <option value="xk">Kosovo</option>
+        <option value="nl">Niederlande</option>
+        <option value="sa">Saudi-Arabien</option>
+        <option value="rs">Serbien</option>
+        <option value="es">Spanien</option>
+        <option value="tr">Türkei</option>
+        <option value="cy">Zypern</option>
+      </select>
+    </div>
+
+    <div class="tablecard">
+      <div class="scroller">
+      <table id="t">
+        <thead>
+          <tr><th>Ziel</th><th>Typ</th><th>Hin → Rück</th><th>Airline</th>
+          <th>Gültig Aug.</th><th>Mietwagen / Roadtrip</th><th>Preis Aug. (Hin+Rück)</th></tr>
+        </thead>
+        <tbody>
+
+          <tr data-cat="beachisland" data-top="1" data-country="es">
+            <td><span class="dest">Alicante</span><span class="toptip">Top-Tipp</span><span class="country">Spanien</span></td>
+            <td><span class="tag t-beach">Strand</span></td>
+            <td class="dates">Di 25.8 → Di 1.9<span class="alt">od. Sa 22.8 → Sa 29.8</span></td>
+            <td class="airline">Ryanair</td>
+            <td class="valid">✓ ganzjährig</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Costa Blanca, Valencia, Murcia</span></td>
+            <td class="price p1">≈ 200 €<small><span class="conf c-live">live 25.8.–1.9.</span> inkl. Gepäckstück – bisher günstigster Fund</small></td>
+          </tr>
+
+          <tr data-cat="road" data-top="1" data-country="it">
+            <td><span class="dest">Rom</span><span class="toptip">Top-Tipp</span><span class="country">Italien</span></td>
+            <td><span class="tag t-road">Stadt + Roadtrip</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8<span class="alt">od. Di 25.8 → Di 1.9</span></td>
+            <td class="airline">Skyalps</td>
+            <td class="valid">✓ bis 31.10.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Latium, Toskana, Umbrien</span></td>
+            <td class="price p1">≈ 215 €<small><span class="conf c-cf">checkfelix Ø Aug.</span> Gepäck je Skyalps-Tarif</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-top="1" data-country="it">
+            <td><span class="dest">Sardinien · Olbia</span><span class="toptip">Top-Tipp</span><span class="country">Italien</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8<span class="alt">od. Mi 26.8 → Mi 2.9</span></td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 7.11.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Costa Smeralda, Norden – top Rundtour</span></td>
+            <td class="price p1">≈ 160–260 €<small><span class="conf c-cf">checkfelix</span> Strecke oft ab ~150 €, Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-top="1" data-country="it">
+            <td><span class="dest">Sardinien · Cagliari</span><span class="toptip">Top-Tipp</span><span class="country">Italien</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 24.10.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Süden &amp; Westküste, Strände + Inland</span></td>
+            <td class="price p1">≈ 180–280 €<small><span class="conf c-est">Schätzg.</span> Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-top="1" data-country="cy">
+            <td><span class="dest">Larnaka</span><span class="toptip">Top-Tipp</span><span class="country">Zypern</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 7.11.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Ganze Insel gut mit Auto</span></td>
+            <td class="price p2">≈ 190–250 €<small><span class="conf c-cf">checkfelix</span> Strecke ~190 €, Koffer via SMART</small></td>
+          </tr>
+
+          <tr class="hl" data-cat="road" data-top="1" data-country="es">
+            <td><span class="dest">Barcelona</span><span class="toptip">Top-Tipp</span><span class="country">Spanien</span></td>
+            <td><span class="tag t-road">Stadt + Roadtrip</span></td>
+            <td class="dates">Mo 24.8 → Mo 31.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 2.11.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Costa Brava, Katalonien, Pyrenäen</span></td>
+            <td class="price p2">≈ 240 €<small><span class="conf c-live">live 26.8.</span> mit Handgepäck; +Koffer via SMART ~+50 €</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-top="1" data-country="gr">
+            <td><span class="dest">Kreta · Heraklion</span><span class="country">Griechenland</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">So 23.8 → So 30.8<span class="alt">od. Mo 24.8 → Mo 31.8</span></td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 2.11.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Große Insel – ideal für Mietwagen</span></td>
+            <td class="price p2">≈ 290 €<small><span class="conf c-ew">EW Aug.</span> ab 150 € one-way, Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="gr">
+            <td><span class="dest">Korfu</span><span class="country">Griechenland</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">So 23.8 → So 30.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 4.10.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Grüne Insel, schöne Küstenstraßen</span></td>
+            <td class="price p2">≈ 270–350 €<small><span class="conf c-est">Schätzg.</span> Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="gr">
+            <td><span class="dest">Kos</span><span class="country">Griechenland</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8<span class="alt">od. Mi 26.8 → Mi 2.9</span></td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 3.10.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Kleine Insel, Roller/Auto angenehm</span></td>
+            <td class="price p2">≈ 270–360 €<small><span class="conf c-est">Schätzg.</span> Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="gr">
+            <td><span class="dest">Rhodos</span><span class="country">Griechenland</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8<span class="alt">od. Di 25.8 → Di 1.9</span></td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 31.10.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Gut mit Auto, kurze Distanzen</span></td>
+            <td class="price p2">≈ 270–360 €<small><span class="conf c-cf">checkfelix</span> Ø ~361 €, ab 273 €</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="gr">
+            <td><span class="dest">Karpathos</span><span class="country">Griechenland</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">Di 25.8 → Di 1.9</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 6.10.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Ursprünglich, ruhig – nur Di-Rotation</span></td>
+            <td class="price p2">≈ 300–420 €<small><span class="conf c-est">Schätzg.</span> Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-top="1" data-country="tr">
+            <td><span class="dest">Antalya</span><span class="country">Türkei</span></td>
+            <td><span class="tag t-beach">Strand</span></td>
+            <td class="dates">So 23.8 → So 30.8<span class="alt">od. Mo 24.8 / Mi 26.8</span></td>
+            <td class="airline">Corendon</td>
+            <td class="valid">✓ bis 30.9.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Lykische Küste, antike Stätten</span></td>
+            <td class="price p2">≈ 200–320 €<small><span class="conf c-est">Schätzg.</span> oft als Paket günstiger</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-top="1" data-country="fr">
+            <td><span class="dest">Korsika · Calvi</span><span class="country">Frankreich</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">So 23.8 → So 30.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 4.10.</td>
+            <td class="rt"><span class="on">●●●</span><span class="rt-note">Spektakuläre Rundtour – aber teuerste Insel</span></td>
+            <td class="price p3">≈ 400 €<small><span class="conf c-cf">checkfelix</span> Strecke ~409 €, Saisonflug</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="es">
+            <td><span class="dest">Palma de Mallorca</span><span class="country">Spanien</span></td>
+            <td><span class="tag t-island">Insel</span></td>
+            <td class="dates">täglich – frei wählbar</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ ganzjährig</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Kompakte Insel-Rundfahrt</span></td>
+            <td class="price p2">≈ 260–300 €<small><span class="conf c-ew">EW Aug.</span> ab 125 € one-way</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="it">
+            <td><span class="dest">Lamezia Terme</span><span class="country">Italien · Kalabrien</span></td>
+            <td><span class="tag t-beach">Strand</span></td>
+            <td class="dates">So 23.8 → So 30.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 27.9.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Tropea, Capo Vaticano</span></td>
+            <td class="price p2">≈ 220–340 €<small><span class="conf c-est">Schätzg.</span> Koffer via SMART</small></td>
+          </tr>
+
+          <tr data-cat="beachisland" data-country="bg">
+            <td><span class="dest">Burgas</span><span class="country">Bulgarien</span></td>
+            <td><span class="tag t-beach">Strand</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8</td>
+            <td class="airline"><span class="ew">Eurowings</span></td>
+            <td class="valid">✓ bis 12.9.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Schwarzmeerküste, Nessebar</span></td>
+            <td class="price p2">≈ 215–350 €<small><span class="conf c-cf">checkfelix</span> Ø ~216 €, Direktstrecke teurer</small></td>
+          </tr>
+
+          <tr data-cat="road" data-country="xk">
+            <td><span class="dest">Pristina</span><span class="country">Kosovo</span></td>
+            <td><span class="tag t-road">Roadtrip Balkan</span></td>
+            <td class="dates">So 23.8 → So 30.8</td>
+            <td class="airline">GP Aviation</td>
+            <td class="valid">✓ bis 25.10.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Kosovo, Albanien, Nordmazedonien</span></td>
+            <td class="price p2">≈ 220–320 €<small><span class="conf c-est">Schätzg.</span></small></td>
+          </tr>
+
+          <tr data-cat="city" data-country="dk">
+            <td><span class="dest">Kopenhagen</span><span class="country">Dänemark</span></td>
+            <td><span class="tag t-city">Stadt</span></td>
+            <td class="dates">Sa 22.8 → Sa 29.8</td>
+            <td class="airline">SAS</td>
+            <td class="valid">✓ bis 12.9.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Seeland + Brücke nach Südschweden</span></td>
+            <td class="price p2">≈ 200–320 €<small><span class="conf c-est">Schätzg.</span></small></td>
+          </tr>
+
+          <tr data-cat="city" data-country="nl">
+            <td><span class="dest">Amsterdam</span><span class="country">Niederlande</span></td>
+            <td><span class="tag t-city">Stadt</span></td>
+            <td class="dates">So 23.8 / Di 25.8</td>
+            <td class="airline">Transavia</td>
+            <td class="valid">✓ ganzjährig</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Niederlande kompakt mit dem Auto</span></td>
+            <td class="price p2">≈ 180–300 €<small><span class="conf c-est">Schätzg.</span></small></td>
+          </tr>
+
+          <tr data-cat="city" data-country="rs">
+            <td><span class="dest">Belgrad</span><span class="country">Serbien</span></td>
+            <td><span class="tag t-city">Stadt</span></td>
+            <td class="dates">Mo 24.8 → Mo 31.8</td>
+            <td class="airline">Air Serbia</td>
+            <td class="valid">✓ ganzjährig</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Ausgangspunkt Serbien-Rundreise</span></td>
+            <td class="price p2">≈ 180–300 €<small><span class="conf c-est">Schätzg.</span></small></td>
+          </tr>
+
+          <tr data-cat="city" data-country="tr">
+            <td><span class="dest">Istanbul</span><span class="country">Türkei</span></td>
+            <td><span class="tag t-city">Stadt</span></td>
+            <td class="dates">täglich – frei wählbar</td>
+            <td class="airline">Turkish Airlines</td>
+            <td class="valid">✓ ganzjährig</td>
+            <td class="rt"><span class="on">●</span><span class="off">●●</span><span class="rt-note">Megastadt, eher kein Mietwagen</span></td>
+            <td class="price p2">≈ 200–320 €<small><span class="conf c-est">Schätzg.</span> Gepäck meist inkl.</small></td>
+          </tr>
+
+          <tr data-cat="city" data-country="il">
+            <td><span class="dest">Tel Aviv</span><span class="country">Israel</span></td>
+            <td><span class="tag t-city">Stadt/Strand</span></td>
+            <td class="dates">bis täglich (Israir)<span class="alt">Mo/Mi*/Fr (EL AL)</span></td>
+            <td class="airline">Israir · EL AL</td>
+            <td class="valid">✓ Israir bis 24.10.</td>
+            <td class="rt"><span class="on">●●</span><span class="off">●</span><span class="rt-note">Aktuelle BMEIA-Reisehinweise prüfen</span></td>
+            <td class="price p3">≈ 300–450 €<small><span class="conf c-est">Schätzg.</span></small></td>
+          </tr>
+
+          <tr data-cat="city" data-country="sa">
+            <td><span class="dest">Riad</span><span class="country">Saudi-Arabien</span></td>
+            <td><span class="tag t-city">Stadt</span></td>
+            <td class="dates">So 23.8 / Mi 26.8</td>
+            <td class="airline">Flynas</td>
+            <td class="valid">✓ bis 29.9.</td>
+            <td class="rt"><span class="on">●</span><span class="off">●●</span><span class="rt-note">Kein klassisches Urlaubsziel, sehr heiß</span></td>
+            <td class="price p3">≈ 450–600 €<small><span class="conf c-est">Schätzg.</span></small></td>
+          </tr>
+
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <p id="emptymsg" class="hidden" style="text-align:center;color:var(--muted);padding:24px 0;">Keine Ziele in dieser Auswahl.</p>
+
+    <div class="notes">
+      <div class="note">
+        <h3>Wie die Preise zu lesen sind</h3>
+        <p><span class="conf c-live">live</span> = konkretes Datum gefunden. <span class="conf c-cf">checkfelix</span> = checkfelix-Wert (Ø August bzw. typische Strecke). <span class="conf c-ew">EW Aug.</span> = Eurowings-Startpreis August. <span class="conf c-est">Schätzg.</span> = Richtwert.</p>
+        <p>Alle Werte <b>Hin + Rück</b>. checkfelix-Ø sind Mittelwerte – dein konkretes August-Datum kann darüber liegen.</p>
+      </div>
+      <div class="note">
+        <h3>Bestwert bisher</h3>
+        <p><b>Alicante</b>, 25.8.–1.9., knapp <b>200 € inkl. Gepäckstück</b> – damit klar die günstigste Option und Costa Blanca ist top zum Fahren.</p>
+      </div>
+      <div class="note">
+        <h3>Gepäck nicht vergessen</h3>
+        <p>Bei <b>Eurowings</b> ist der Koffer im <b>SMART-Tarif</b> drin. Bei <b>Ryanair (Alicante)</b> Priority + 20-kg-Koffer extra – beim Alicante-Wert oben bereits enthalten.</p>
+      </div>
+      <div class="note">
+        <h3>Filter</h3>
+        <p>Oben nach <b>Art</b> (Strand/Insel, Roadtrip, Stadt, Top-Mietwagen) und nach <b>Land</b> filtern – beide Filter wirken zusammen.</p>
+      </div>
+    </div>
+
+    <footer>
+      Preise: checkfelix / swoodoo / Eurowings (August) / Kayak / momondo, Stand Recherche Juni 2026 – vor Buchung tagesaktuell prüfen. Flugtage lt. Salzburg-Airport-Flugplan Sommer 2026.
+    </footer>
+  </div>
+
+<script>
+  const chips=document.querySelectorAll('.chip');
+  const rows=document.querySelectorAll('#t tbody tr');
+  const empty=document.getElementById('emptymsg');
+  const countrySel=document.getElementById('countrySel');
+  let activeCat='all';
+  function apply(){
+    let visible=0;
+    rows.forEach(r=>{
+      const catOk = activeCat==='all' ? true : (activeCat==='top' ? r.dataset.top==='1' : r.dataset.cat===activeCat);
+      const cOk = countrySel.value==='all' ? true : r.dataset.country===countrySel.value;
+      const show=catOk&&cOk;
+      r.classList.toggle('hidden',!show);
+      if(show)visible++;
+    });
+    empty.classList.toggle('hidden',visible>0);
+  }
+  chips.forEach(chip=>{
+    chip.addEventListener('click',()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      activeCat=chip.dataset.filter;
+      apply();
+    });
+  });
+  countrySel.addEventListener('change',apply);
+</script>
+</body>
+</html>
