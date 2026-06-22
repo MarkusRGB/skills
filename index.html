@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Alle installierten Claude Code Skills auf einen Blick – durchsuchbar, kategorisiert, auto-generiert."/>
 <title>Claude Code Skills</title>
 <style>
 /* ── Design tokens ── */
@@ -10,12 +11,12 @@
   --bg:#0d0d0d;--bg-side:#090909;--bg-card:#141414;--bg-input:#121212;--bg-stat:#131313;
   --bg-nav-h:#181818;--bg-nav-a:#1e1e1e;--bg-seg:#141414;--bg-seg-a:#232323;
   --bd:#1e1e1e;--bd-h:#2c2c2c;--bd-in:#242424;--bd-inf:#505050;--bd-stat:#1e1e1e;
-  --tx:#c0c0c0;--tx-h1:#eeeeee;--tx-meta:#383838;
-  --tx-stat:#484848;--tx-stat-b:#b8b8b8;
-  --tx-nav-hd:#242424;--tx-nav:#3c3c3c;--tx-nav-h:#989898;--tx-nav-a:#cccccc;--tx-nav-cnt:#282828;
-  --tx-cat:#303030;--tx-name:#dcdcdc;--tx-desc:#484848;--tx-none:#343434;
-  --tx-seg:#484848;--tx-seg-a:#d4d4d4;
-  --ph:#2c2c2c;
+  --tx:#c0c0c0;--tx-h1:#eeeeee;--tx-meta:#808080;
+  --tx-stat:#808080;--tx-stat-b:#b8b8b8;
+  --tx-nav-hd:#6c6c6c;--tx-nav:#848484;--tx-nav-h:#b8b8b8;--tx-nav-a:#cccccc;--tx-nav-cnt:#606060;
+  --tx-cat:#838383;--tx-name:#dcdcdc;--tx-desc:#888888;--tx-none:#7a7a7a;
+  --tx-seg:#848484;--tx-seg-a:#d4d4d4;
+  --ph:#636363;
   --sh-card:none;
   --sh-card-h:0 8px 28px rgba(0,0,0,.6);
   --sh-seg-a:0 1px 4px rgba(0,0,0,.5);
@@ -66,7 +67,8 @@ aside h2{
   transition:background 130ms ease-out,color 130ms ease-out,
              transform 160ms var(--ease-ui),border-color 130ms ease-out;
 }
-.nav-link:hover{background:var(--bg-nav-h);color:var(--tx-nav-h);transform:translateX(2px)}
+.nav-link:hover{background:var(--bg-nav-h);color:var(--tx-nav-h)}
+@media(hover:hover) and (pointer:fine){.nav-link:hover{transform:translateX(2px)}}
 .nav-link.active{background:var(--bg-nav-a);color:var(--tx-nav-a);border-left-color:var(--tx-nav)}
 .nav-cnt{font-size:.62rem;color:var(--tx-nav-cnt);font-variant-numeric:tabular-nums}
 /* ── Main ── */
@@ -99,6 +101,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
   display:flex;align-items:center;gap:.35rem;padding:.32rem .72rem;
   border-radius:5px;font-size:.73rem;color:var(--tx-seg);background:none;border:none;
   cursor:pointer;font-family:inherit;font-weight:500;white-space:nowrap;
+  min-height:32px;
   transition:background 150ms ease-out,color 150ms ease-out,
              box-shadow 150ms ease-out,transform 100ms ease-out;
 }
@@ -123,13 +126,25 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
   transition:transform 160ms var(--ease-ui),box-shadow 160ms var(--ease-ui),
              border-color 160ms ease-out,background .25s ease;
 }
-.card:hover{transform:translateY(-2px);box-shadow:var(--sh-card-h);border-color:var(--bd-h)}
+.card:hover{box-shadow:var(--sh-card-h);border-color:var(--bd-h)}
+@media(hover:hover) and (pointer:fine){.card:hover{transform:translateY(-2px)}}
 .n{
   font-family:"SF Mono","Fira Code",ui-monospace,monospace;
   font-size:.8rem;font-weight:600;color:var(--tx-name);margin-bottom:.3rem;
   transition:color .25s ease;
 }
-.d{font-size:.7rem;color:var(--tx-desc);line-height:1.5;transition:color .25s ease}
+.d{font-size:.72rem;color:var(--tx-desc);line-height:1.5;transition:color .25s ease}
+/* ── Focus-visible ── */
+:focus-visible{
+  outline:2px solid var(--bd-inf);outline-offset:2px;border-radius:4px;
+}
+/* ── Reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    transition-duration:.01ms!important;
+    animation-duration:.01ms!important;
+  }
+}
 /* ── Utils ── */
 .hidden{display:none!important}
 #none{color:var(--tx-none);font-size:.83rem;padding:.75rem 0}
@@ -140,13 +155,21 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 (function(){
   var s=localStorage.getItem('skills-theme');
   var p=window.matchMedia('(prefers-color-scheme: light)').matches;
-  if(s==='light'||(s===null&&p))document.documentElement.classList.add('light');
+  var isLight=s==='light'||(s===null&&p);
+  if(isLight)document.documentElement.classList.add('light');
+  /* Sync aria-pressed once DOM is ready */
+  document.addEventListener('DOMContentLoaded',function(){
+    var d=document.getElementById('ts-dark');
+    var l=document.getElementById('ts-light');
+    if(d)d.setAttribute('aria-pressed',String(!isLight));
+    if(l)l.setAttribute('aria-pressed',String(isLight));
+  });
 })();
 </script>
 </head>
 <body>
-<aside>
-<h2>Kategorien</h2>
+<aside aria-label="Kategorien-Navigation">
+<h2 aria-hidden="true">Kategorien</h2>
 <a href="#c-ui-ux-design" class="nav-link">UI/UX Design <span class="nav-cnt">27</span></a>
 <a href="#c-ux-research-strategie" class="nav-link">UX Research &amp; Strategie <span class="nav-cnt">16</span></a>
 <a href="#c-brand-design-referenzen" class="nav-link">Brand &amp; Design Referenzen <span class="nav-cnt">4</span></a>
@@ -162,19 +185,19 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">17</span></a>
 <a href="#c-netzwerk-diagnose" class="nav-link">Netzwerk &amp; Diagnose <span class="nav-cnt">6</span></a>
 <a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">3</span></a>
-<a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">14</span></a>
+<a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">15</span></a>
 
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 18.06.2026 10:28 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 22.06.2026 12:27 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">173</b></div>
+  <div class="stat">Skills <b id="cnt">174</b></div>
   <div class="stat">Kategorien <b>16</b></div>
-  <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false"/>
-  <div class="ts">
-    <button class="ts-opt" id="ts-dark" onclick="setTheme('dark')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Dunkel</button>
-    <button class="ts-opt" id="ts-light" onclick="setTheme('light')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Hell</button>
+  <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false" aria-label="Skills suchen" role="searchbox"/>
+  <div class="ts" role="group" aria-label="Farbschema">
+    <button class="ts-opt" id="ts-dark" onclick="setTheme('dark')" aria-pressed="true" aria-label="Dunkles Design"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Dunkel</button>
+    <button class="ts-opt" id="ts-light" onclick="setTheme('light')" aria-pressed="false" aria-label="Helles Design"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Hell</button>
   </div>
 </div>
 <div id="cats">
@@ -411,18 +434,22 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <div class="card"><div class="n">/extract-design</div><div class="d">Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React them</div></div>
 <div class="card"><div class="n">/gangtise-copilot</div><div class="d">One-stop installer and companion for the full Gangtise (岗底斯投研) OpenAPI skill suite — 19 official skills covering data retrieval (OHLC 行情, 财务, 估值, 研报, 首席观点, 会议纪要</div></div>
 <div class="card"><div class="n">/ima-copilot</div><div class="d">One-stop companion and installer for the official Tencent IMA skill (腾讯 IMA / ima.qq.com). Handles zero-config installation to Claude Code / Codex / OpenClaw vi</div></div>
+<div class="card"><div class="n">/top-design</div><div class="d">Create award-winning, immersive web experiences at the level of Awwwards-featured agencies. Use when the user mentions &quot;premium website&quot;, &quot;portfolio site&quot;, &quot;scr</div></div>
 <div class="card"><div class="n">/watch</div><div class="d">Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback),</div></div>
 <div class="card"><div class="n">/website-builder-setup</div><div class="d">Install the full AI website builder stack — UI/UX Pro Max, Framer Motion animations, and 21st.dev components. One skill, three tools, zero coding experience nee</div></div>
 </div>
 </div>
 
 </div>
-<p id="none" style="display:none"></p>
+<p id="none" role="status" aria-live="polite" style="display:none"></p>
 </main>
 <script>
 function setTheme(m){
-  document.documentElement.classList.toggle('light',m==='light');
+  var isLight=m==='light';
+  document.documentElement.classList.toggle('light',isLight);
   localStorage.setItem('skills-theme',m);
+  document.getElementById('ts-dark').setAttribute('aria-pressed',String(!isLight));
+  document.getElementById('ts-light').setAttribute('aria-pressed',String(isLight));
 }
 function f(){
   var q=document.getElementById('q').value.toLowerCase();
@@ -437,7 +464,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:173);
+  document.getElementById('cnt').textContent=n||(q?0:174);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
