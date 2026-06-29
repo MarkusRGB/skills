@@ -378,7 +378,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-01@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 78 (Los Angeles)
+SUMMARY:⚽ Sechzehntelfinale – Match 78 (Los Angeles)
 DTSTART:20260628T170000Z
 DTEND:20260628T190000Z
 DESCRIPTION:Round of 32 – Match 78\nZweiter Gruppe A vs. Zweiter Gruppe B\nAnpfiff: 19:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
@@ -387,7 +387,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-02@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 73 (Houston)
+SUMMARY:⚽ Sechzehntelfinale – Match 73 (Houston)
 DTSTART:20260629T190000Z
 DTEND:20260629T210000Z
 DESCRIPTION:Round of 32 – Match 73\nSieger Gruppe C vs. Zweiter Gruppe F\nAnpfiff: 21:00 Uhr MESZ\nStadion: NRG Stadium, Houston
@@ -396,7 +396,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-03@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 74 (Boston)
+SUMMARY:⚽ Sechzehntelfinale – Match 74 (Boston)
 DTSTART:20260629T223000Z
 DTEND:20260630T003000Z
 DESCRIPTION:Round of 32 – Match 74\nSieger Gruppe E vs. Bester Dritter A/B/C/D/F\nAnpfiff: 00:30 Uhr MESZ (30. Juni)\nStadion: Gillette Stadium, Boston
@@ -405,7 +405,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-04@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 75 (Monterrey)
+SUMMARY:⚽ Sechzehntelfinale – Match 75 (Monterrey)
 DTSTART:20260630T030000Z
 DTEND:20260630T050000Z
 DESCRIPTION:Round of 32 – Match 75\nSieger Gruppe F vs. Zweiter Gruppe C\nAnpfiff: 05:00 Uhr MESZ\nStadion: Estadio BBVA, Monterrey MX
@@ -414,7 +414,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-05@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 76 (Dallas)
+SUMMARY:⚽ Sechzehntelfinale – Match 76 (Dallas)
 DTSTART:20260630T190000Z
 DTEND:20260630T210000Z
 DESCRIPTION:Round of 32 – Match 76\nZweiter Gruppe E vs. Zweiter Gruppe I\nAnpfiff: 21:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
@@ -423,7 +423,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-06@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 77 (New Jersey)
+SUMMARY:⚽ Sechzehntelfinale – Match 77 (New Jersey)
 DTSTART:20260630T230000Z
 DTEND:20260701T010000Z
 DESCRIPTION:Round of 32 – Match 77\nSieger Gruppe I vs. Bester Dritter C/D/F/G/H\nAnpfiff: 01:00 Uhr MESZ (1. Juli)\nStadion: MetLife Stadium, New Jersey
@@ -432,7 +432,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-07@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 79 (Mexico City)
+SUMMARY:⚽ Sechzehntelfinale – Match 79 (Mexico City)
 DTSTART:20260701T030000Z
 DTEND:20260701T050000Z
 DESCRIPTION:Round of 32 – Match 79\nSieger Gruppe A vs. Bester Dritter C/E/F/H/I\nAnpfiff: 05:00 Uhr MESZ\nStadion: Estadio Azteca, Mexico City
@@ -441,7 +441,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-08@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 80 (Atlanta)
+SUMMARY:⚽ Sechzehntelfinale – Match 80 (Atlanta)
 DTSTART:20260701T160000Z
 DTEND:20260701T180000Z
 DESCRIPTION:Round of 32 – Match 80\nSieger Gruppe L vs. Bester Dritter E/H/I/J/K\nAnpfiff: 18:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
@@ -450,7 +450,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-09@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 82 (Seattle)
+SUMMARY:⚽ Sechzehntelfinale – Match 82 (Seattle)
 DTSTART:20260701T200000Z
 DTEND:20260701T220000Z
 DESCRIPTION:Round of 32 – Match 82\nSieger Gruppe G vs. Bester Dritter A/E/H/I/J\nAnpfiff: 22:00 Uhr MESZ\nStadion: Lumen Field, Seattle
@@ -459,7 +459,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-10@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 81 (San Francisco)
+SUMMARY:⚽ Sechzehntelfinale – Match 81 (San Francisco)
 DTSTART:20260702T020000Z
 DTEND:20260702T040000Z
 DESCRIPTION:Round of 32 – Match 81\nSieger Gruppe D vs. Bester Dritter B/E/F/I/J\nAnpfiff: 04:00 Uhr MESZ\nStadion: Levi's Stadium, San Francisco
@@ -468,7 +468,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-11@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 84 (Los Angeles)
+SUMMARY:⚽ Sechzehntelfinale – Match 84 (Los Angeles)
 DTSTART:20260702T190000Z
 DTEND:20260702T210000Z
 DESCRIPTION:Round of 32 – Match 84\nSieger Gruppe H vs. Zweiter Gruppe J\nAnpfiff: 21:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
@@ -477,7 +477,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-12@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 83 (Toronto)
+SUMMARY:⚽ Sechzehntelfinale – Match 83 (Toronto)
 DTSTART:20260702T230000Z
 DTEND:20260703T010000Z
 DESCRIPTION:Round of 32 – Match 83\nZweiter Gruppe K vs. Zweiter Gruppe L\nAnpfiff: 01:00 Uhr MESZ (3. Juli)\nStadion: BMO Field, Toronto
@@ -486,7 +486,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-13@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 85 (Vancouver)
+SUMMARY:⚽ Sechzehntelfinale – Match 85 (Vancouver)
 DTSTART:20260703T030000Z
 DTEND:20260703T050000Z
 DESCRIPTION:Round of 32 – Match 85\nSieger Gruppe B vs. Bester Dritter E/F/G/I/J\nAnpfiff: 05:00 Uhr MESZ\nStadion: BC Place, Vancouver
@@ -495,7 +495,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-14@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 88 (Dallas)
+SUMMARY:⚽ Sechzehntelfinale – Match 88 (Dallas)
 DTSTART:20260703T180000Z
 DTEND:20260703T200000Z
 DESCRIPTION:Round of 32 – Match 88\nZweiter Gruppe D vs. Zweiter Gruppe G\nAnpfiff: 20:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
@@ -504,7 +504,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-15@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 86 (Miami)
+SUMMARY:⚽ Sechzehntelfinale – Match 86 (Miami)
 DTSTART:20260703T220000Z
 DTEND:20260704T000000Z
 DESCRIPTION:Round of 32 – Match 86\nSieger Gruppe J vs. Zweiter Gruppe H\nAnpfiff: 00:00 Uhr MESZ (4. Juli)\nStadion: Hard Rock Stadium, Miami
@@ -513,7 +513,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-16@radlgruber
-SUMMARY:⚽ Achtelfinale – Match 87 (Kansas City)
+SUMMARY:⚽ Sechzehntelfinale – Match 87 (Kansas City)
 DTSTART:20260704T013000Z
 DTEND:20260704T033000Z
 DESCRIPTION:Round of 32 – Match 87\nSieger Gruppe K vs. Bester Dritter D/E/I/J/L\nAnpfiff: 03:30 Uhr MESZ\nStadion: Arrowhead Stadium, Kansas City
@@ -522,7 +522,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-01@radlgruber
-SUMMARY:🔥 Round of 16 – Match 90 (Houston)
+SUMMARY:🔥 Achtelfinale – Match 90 (Houston)
 DTSTART:20260704T190000Z
 DTEND:20260704T210000Z
 DESCRIPTION:Round of 16\nSieger Match 73 vs. Sieger Match 75\nAnpfiff: 21:00 Uhr MESZ\nStadion: NRG Stadium, Houston
@@ -531,7 +531,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-02@radlgruber
-SUMMARY:🔥 Round of 16 – Match 89 (Philadelphia)
+SUMMARY:🔥 Achtelfinale – Match 89 (Philadelphia)
 DTSTART:20260704T230000Z
 DTEND:20260705T010000Z
 DESCRIPTION:Round of 16\nSieger Match 74 vs. Sieger Match 77\nAnpfiff: 01:00 Uhr MESZ (5. Juli)\nStadion: Lincoln Financial Field, Philadelphia
@@ -540,7 +540,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-03@radlgruber
-SUMMARY:🔥 Round of 16 – Match 91 (New Jersey)
+SUMMARY:🔥 Achtelfinale – Match 91 (New Jersey)
 DTSTART:20260705T220000Z
 DTEND:20260706T000000Z
 DESCRIPTION:Round of 16\nSieger Match 76 vs. Sieger Match 78\nAnpfiff: 00:00 Uhr MESZ (6. Juli)\nStadion: MetLife Stadium, New Jersey
@@ -549,7 +549,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-04@radlgruber
-SUMMARY:🔥 Round of 16 – Match 92 (Mexico City)
+SUMMARY:🔥 Achtelfinale – Match 92 (Mexico City)
 DTSTART:20260706T020000Z
 DTEND:20260706T040000Z
 DESCRIPTION:Round of 16\nSieger Match 79 vs. Sieger Match 80\nAnpfiff: 04:00 Uhr MESZ\nStadion: Estadio Azteca, Mexico City
@@ -558,7 +558,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-05@radlgruber
-SUMMARY:🔥 Round of 16 – Match 93 (Dallas)
+SUMMARY:🔥 Achtelfinale – Match 93 (Dallas)
 DTSTART:20260706T210000Z
 DTEND:20260706T230000Z
 DESCRIPTION:Round of 16\nSieger Match 83 vs. Sieger Match 84\nAnpfiff: 23:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
@@ -567,7 +567,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-06@radlgruber
-SUMMARY:🔥 Round of 16 – Match 94 (Seattle)
+SUMMARY:🔥 Achtelfinale – Match 94 (Seattle)
 DTSTART:20260707T020000Z
 DTEND:20260707T040000Z
 DESCRIPTION:Round of 16\nSieger Match 81 vs. Sieger Match 82\nAnpfiff: 04:00 Uhr MESZ\nStadion: Lumen Field, Seattle
@@ -576,7 +576,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-07@radlgruber
-SUMMARY:🔥 Round of 16 – Match 95 (Atlanta)
+SUMMARY:🔥 Achtelfinale – Match 95 (Atlanta)
 DTSTART:20260707T180000Z
 DTEND:20260707T200000Z
 DESCRIPTION:Round of 16\nSieger Match 86 vs. Sieger Match 88\nAnpfiff: 20:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
@@ -585,7 +585,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-08@radlgruber
-SUMMARY:🔥 Round of 16 – Match 96 (Vancouver)
+SUMMARY:🔥 Achtelfinale – Match 96 (Vancouver)
 DTSTART:20260707T220000Z
 DTEND:20260708T000000Z
 DESCRIPTION:Round of 16\nSieger Match 85 vs. Sieger Match 87\nAnpfiff: 00:00 Uhr MESZ (8. Juli)\nStadion: BC Place, Vancouver
