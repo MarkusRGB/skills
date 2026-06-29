@@ -1,0 +1,32 @@
+name: Update WM2026 Calendar
+
+on:
+  schedule:
+    # Every 30 minutes
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run result updater
+        run: python3 update_wm2026.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "WM2026 Bot"
+          git config user.email "bot@radlgruber.net"
+          git add WM2026_Highlights.ics
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "🏆 WM2026: Ergebnisse aktualisiert $(date +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
