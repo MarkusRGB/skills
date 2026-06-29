@@ -108,46 +108,51 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-012@radlgruber
-SUMMARY:🇦🇷 Argentinien vs. 🇦🇹 Österreich – Gruppe J ⭐ HEUTE!
+SUMMARY:🇦🇷 Argentinien vs. 🇦🇹 Österreich – Gruppe J ✅ 2:0
 DTSTART:20260622T170000Z
 DTEND:20260622T190000Z
-DESCRIPTION:Gruppe J – Österreich trifft auf Weltmeister Argentinien!\nAnpfiff: 19:00 Uhr MESZ\nStadion: AT&T Stadium, Arlington/Dallas
+DESCRIPTION:Gruppe J – Österreich trifft auf Weltmeister Argentinien!
+ERGEBNIS: Argentinien 2-0 Österreich ✅\nStadion: AT&T Stadium, Arlington/Dallas
 LOCATION:AT&T Stadium, Arlington Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-013@radlgruber
-SUMMARY:🇫🇷 Frankreich vs. Irak – Gruppe I ✅
+SUMMARY:🇫🇷 Frankreich vs. Irak – Gruppe I ✅ ✅ 3:0
 DTSTART:20260622T210000Z
 DTEND:20260622T230000Z
-DESCRIPTION:Gruppe I\nAnpfiff: 23:00 Uhr MESZ\nStadion: Lincoln Financial Field, Philadelphia
+DESCRIPTION:Gruppe I
+ERGEBNIS: Frankreich 3-0 Irak ✅\nStadion: Lincoln Financial Field, Philadelphia
 LOCATION:Lincoln Financial Field, Philadelphia
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k23-01@radlgruber
-SUMMARY:🇵🇹 Portugal vs. Usbekistan – Gruppe K
+SUMMARY:🇵🇹 Portugal vs. Usbekistan – Gruppe K ✅ 5:0
 DTSTART:20260623T170000Z
 DTEND:20260623T190000Z
-DESCRIPTION:Gruppe K – Matchday 2\nAnpfiff: 19:00 Uhr MESZ\nStadion: NRG Stadium, Houston
+DESCRIPTION:Gruppe K – Matchday 2
+ERGEBNIS: Portugal 5-0 Usbekistan ✅\nStadion: NRG Stadium, Houston
 LOCATION:NRG Stadium, Houston
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k23-02@radlgruber
-SUMMARY:🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. Ghana – Gruppe L
+SUMMARY:🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. Ghana – Gruppe L ✅ 0:0
 DTSTART:20260623T200000Z
 DTEND:20260623T220000Z
-DESCRIPTION:Gruppe L – Matchday 2\nAnpfiff: 22:00 Uhr MESZ\nStadion: Gillette Stadium, Boston
+DESCRIPTION:Gruppe L – Matchday 2
+ERGEBNIS: England 0-0 Ghana ✅\nStadion: Gillette Stadium, Boston
 LOCATION:Gillette Stadium, Foxborough MA
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k23-03@radlgruber
-SUMMARY:🇭🇷 Panama vs. Kroatien – Gruppe L
+SUMMARY:🇭🇷 Panama vs. Kroatien – Gruppe L ✅ 0:1
 DTSTART:20260624T010000Z
 DTEND:20260624T030000Z
-DESCRIPTION:Gruppe L – Matchday 2\nAnpfiff: 03:00 Uhr MESZ\nStadion: BMO Field, Toronto
+DESCRIPTION:Gruppe L – Matchday 2
+ERGEBNIS: Panama 0-1 Kroatien ✅\nStadion: BMO Field, Toronto
 LOCATION:BMO Field, Toronto
 END:VEVENT
 
@@ -162,190 +167,211 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k24-01@radlgruber
-SUMMARY:🇨🇭 Schweiz vs. Kanada – Gruppe B
+SUMMARY:🇨🇭 Schweiz vs. Kanada – Gruppe B ✅ 2:1
 DTSTART:20260624T190000Z
 DTEND:20260624T210000Z
-DESCRIPTION:Gruppe B – Matchday 3\nAnpfiff: 21:00 Uhr MESZ\nStadion: BC Place, Vancouver
+DESCRIPTION:Gruppe B – Matchday 3
+ERGEBNIS: Schweiz 2-1 Kanada ✅\nStadion: BC Place, Vancouver
 LOCATION:BC Place, Vancouver Canada
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k24-02@radlgruber
-SUMMARY:🇧🇦 Bosnien-Herzegowina vs. Katar – Gruppe B
+SUMMARY:🇧🇦 Bosnien-Herzegowina vs. Katar – Gruppe B ✅ 3:1
 DTSTART:20260624T190000Z
 DTEND:20260624T210000Z
-DESCRIPTION:Gruppe B – Matchday 3 (parallel)\nAnpfiff: 21:00 Uhr MESZ\nStadion: Lumen Field, Seattle
+DESCRIPTION:Gruppe B – Matchday 3 (parallel)
+ERGEBNIS: Bosnien-Herzegowina 3-1 Katar ✅\nStadion: Lumen Field, Seattle
 LOCATION:Lumen Field, Seattle
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k24-03@radlgruber
-SUMMARY:🏴󠁧󠁢󠁳󠁣󠁴󠁿 Schottland vs. 🇧🇷 Brasilien – Gruppe C
+SUMMARY:🏴󠁧󠁢󠁳󠁣󠁴󠁿 Schottland vs. 🇧🇷 Brasilien – Gruppe C ✅ 0:3
 DTSTART:20260625T000000Z
 DTEND:20260625T020000Z
-DESCRIPTION:Gruppe C – Matchday 3\nAnpfiff: 02:00 Uhr MESZ (25. Juni)\nStadion: Hard Rock Stadium, Miami
+DESCRIPTION:Gruppe C – Matchday 3
+ERGEBNIS: Schottland 0-3 Brasilien ✅\nStadion: Hard Rock Stadium, Miami
 LOCATION:Hard Rock Stadium, Miami Gardens FL
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k24-04@radlgruber
-SUMMARY:🇲🇦 Marokko vs. Haiti – Gruppe C
+SUMMARY:🇲🇦 Marokko vs. Haiti – Gruppe C ✅ 4:2
 DTSTART:20260625T000000Z
 DTEND:20260625T020000Z
-DESCRIPTION:Gruppe C – Matchday 3 (parallel)\nAnpfiff: 02:00 Uhr MESZ (25. Juni)\nStadion: Mercedes-Benz Stadium, Atlanta
+DESCRIPTION:Gruppe C – Matchday 3 (parallel)
+ERGEBNIS: Marokko 4-2 Haiti ✅\nStadion: Mercedes-Benz Stadium, Atlanta
 LOCATION:Mercedes-Benz Stadium, Atlanta
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k24-05@radlgruber
-SUMMARY:🇨🇿 Tschechien vs. Mexiko – Gruppe A
+SUMMARY:🇨🇿 Tschechien vs. Mexiko – Gruppe A ✅ 0:3
 DTSTART:20260625T030000Z
 DTEND:20260625T050000Z
-DESCRIPTION:Gruppe A – Matchday 3\nAnpfiff: 05:00 Uhr MESZ\nStadion: Estadio Azteca, Mexico City
+DESCRIPTION:Gruppe A – Matchday 3
+ERGEBNIS: Tschechien 0-3 Mexiko ✅\nStadion: Estadio Azteca, Mexico City
 LOCATION:Estadio Azteca, Mexico City
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k24-06@radlgruber
-SUMMARY:🇿🇦 Südafrika vs. Südkorea – Gruppe A
+SUMMARY:🇿🇦 Südafrika vs. Südkorea – Gruppe A ✅ 1:0
 DTSTART:20260625T030000Z
 DTEND:20260625T050000Z
-DESCRIPTION:Gruppe A – Matchday 3 (parallel)\nAnpfiff: 05:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
+DESCRIPTION:Gruppe A – Matchday 3 (parallel)
+ERGEBNIS: Südafrika 1-0 Südkorea ✅\nStadion: AT&T Stadium, Dallas
 LOCATION:AT&T Stadium, Dallas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k25-01@radlgruber
-SUMMARY:🇩🇪 Ecuador vs. Deutschland – Gruppe E ⭐
+SUMMARY:🇩🇪 Ecuador vs. Deutschland – Gruppe E ✅ 2:1
 DTSTART:20260625T200000Z
 DTEND:20260625T220000Z
-DESCRIPTION:Gruppe E – Letztes Gruppenspiel Deutschland\nAnpfiff: 22:00 Uhr MESZ\nStadion: MetLife Stadium, East Rutherford NJ
+DESCRIPTION:Gruppe E – Letztes Gruppenspiel Deutschland
+ERGEBNIS: Ecuador 2-1 Deutschland ✅\nStadion: MetLife Stadium, East Rutherford NJ
 LOCATION:MetLife Stadium, East Rutherford NJ
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k25-02@radlgruber
-SUMMARY:🇨🇮 Curaçao vs. Elfenbeinküste – Gruppe E
+SUMMARY:🇨🇮 Curaçao vs. Elfenbeinküste – Gruppe E ✅ 0:2
 DTSTART:20260625T200000Z
 DTEND:20260625T220000Z
-DESCRIPTION:Gruppe E – Matchday 3 (parallel)\nAnpfiff: 22:00 Uhr MESZ\nStadion: Lincoln Financial Field, Philadelphia
+DESCRIPTION:Gruppe E – Matchday 3 (parallel)
+ERGEBNIS: Curaçao 0-2 Elfenbeinküste ✅\nStadion: Lincoln Financial Field, Philadelphia
 LOCATION:Lincoln Financial Field, Philadelphia
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k25-03@radlgruber
-SUMMARY:🇯🇵 Japan vs. Schweden – Gruppe F
+SUMMARY:🇯🇵 Japan vs. Schweden – Gruppe F ✅ 1:1
 DTSTART:20260625T230000Z
 DTEND:20260626T010000Z
-DESCRIPTION:Gruppe F – Matchday 3\nAnpfiff: 01:00 Uhr MESZ (26. Juni)\nStadion: AT&T Stadium, Dallas
+DESCRIPTION:Gruppe F – Matchday 3
+ERGEBNIS: Japan 1-1 Schweden ✅\nStadion: AT&T Stadium, Dallas
 LOCATION:AT&T Stadium, Dallas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k25-04@radlgruber
-SUMMARY:🇳🇱 Tunesien vs. Niederlande – Gruppe F ⭐
+SUMMARY:🇳🇱 Tunesien vs. Niederlande – Gruppe F ✅ 1:3
 DTSTART:20260625T230000Z
 DTEND:20260626T010000Z
-DESCRIPTION:Gruppe F – Letztes Gruppenspiel Niederlande\nAnpfiff: 01:00 Uhr MESZ (26. Juni)\nStadion: Arrowhead Stadium, Kansas City
+DESCRIPTION:Gruppe F – Letztes Gruppenspiel Niederlande
+ERGEBNIS: Tunesien 1-3 Niederlande ✅\nStadion: Arrowhead Stadium, Kansas City
 LOCATION:Arrowhead Stadium, Kansas City
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k25-05@radlgruber
-SUMMARY:🇹🇷 Türkei vs. USA – Gruppe D
+SUMMARY:🇹🇷 Türkei vs. USA – Gruppe D ✅ 3:2
 DTSTART:20260626T040000Z
 DTEND:20260626T060000Z
-DESCRIPTION:Gruppe D – Matchday 3\nAnpfiff: 06:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
+DESCRIPTION:Gruppe D – Matchday 3
+ERGEBNIS: Türkei 3-2 USA ✅\nStadion: SoFi Stadium, Los Angeles
 LOCATION:SoFi Stadium, Inglewood CA
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k25-06@radlgruber
-SUMMARY:🇵🇾 Paraguay vs. Australien – Gruppe D
+SUMMARY:🇵🇾 Paraguay vs. Australien – Gruppe D ✅ 0:0
 DTSTART:20260626T040000Z
 DTEND:20260626T060000Z
-DESCRIPTION:Gruppe D – Matchday 3 (parallel)\nAnpfiff: 06:00 Uhr MESZ\nStadion: Levi's Stadium, San Francisco
+DESCRIPTION:Gruppe D – Matchday 3 (parallel)
+ERGEBNIS: Paraguay 0-0 Australien ✅\nStadion: Levi's Stadium, San Francisco
 LOCATION:Levi's Stadium, Santa Clara CA
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k26-01@radlgruber
-SUMMARY:🇫🇷 Norwegen vs. Frankreich – Gruppe I ⭐
+SUMMARY:🇫🇷 Norwegen vs. Frankreich – Gruppe I ✅ 1:4
 DTSTART:20260626T190000Z
 DTEND:20260626T210000Z
-DESCRIPTION:Gruppe I – Letztes Gruppenspiel Frankreich\nAnpfiff: 21:00 Uhr MESZ\nStadion: Gillette Stadium, Boston
+DESCRIPTION:Gruppe I – Letztes Gruppenspiel Frankreich
+ERGEBNIS: Norwegen 1-4 Frankreich ✅\nStadion: Gillette Stadium, Boston
 LOCATION:Gillette Stadium, Foxborough MA
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k26-02@radlgruber
-SUMMARY:🇸🇳 Senegal vs. Irak – Gruppe I
+SUMMARY:🇸🇳 Senegal vs. Irak – Gruppe I ✅ 5:0
 DTSTART:20260626T190000Z
 DTEND:20260626T210000Z
-DESCRIPTION:Gruppe I – Matchday 3 (parallel)\nAnpfiff: 21:00 Uhr MESZ\nStadion: BMO Field, Toronto
+DESCRIPTION:Gruppe I – Matchday 3 (parallel)
+ERGEBNIS: Senegal 5-0 Irak ✅\nStadion: BMO Field, Toronto
 LOCATION:BMO Field, Toronto
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k26-03@radlgruber
-SUMMARY:🇪🇸 Uruguay vs. Spanien – Gruppe H ⭐
+SUMMARY:🇪🇸 Uruguay vs. Spanien – Gruppe H ✅ 0:1
 DTSTART:20260627T000000Z
 DTEND:20260627T020000Z
-DESCRIPTION:Gruppe H – Letztes Gruppenspiel Spanien\nAnpfiff: 02:00 Uhr MESZ\nStadion: Estadio Akron, Guadalajara MX
+DESCRIPTION:Gruppe H – Letztes Gruppenspiel Spanien
+ERGEBNIS: Uruguay 0-1 Spanien ✅\nStadion: Estadio Akron, Guadalajara MX
 LOCATION:Estadio Akron, Guadalajara Mexico
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k26-04@radlgruber
-SUMMARY:🇨🇻 Kap Verde vs. Saudi-Arabien – Gruppe H
+SUMMARY:🇨🇻 Kap Verde vs. Saudi-Arabien – Gruppe H ✅ 0:0
 DTSTART:20260627T000000Z
 DTEND:20260627T020000Z
-DESCRIPTION:Gruppe H – Matchday 3 (parallel)\nAnpfiff: 02:00 Uhr MESZ\nStadion: NRG Stadium, Houston
+DESCRIPTION:Gruppe H – Matchday 3 (parallel)
+ERGEBNIS: Kap Verde 0-0 Saudi-Arabien ✅\nStadion: NRG Stadium, Houston
 LOCATION:NRG Stadium, Houston
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k26-05@radlgruber
-SUMMARY:🇳🇿 Neuseeland vs. Belgien – Gruppe G
+SUMMARY:🇳🇿 Neuseeland vs. Belgien – Gruppe G ✅ 1:5
 DTSTART:20260627T030000Z
 DTEND:20260627T050000Z
-DESCRIPTION:Gruppe G – Matchday 3\nAnpfiff: 05:00 Uhr MESZ\nStadion: BC Place, Vancouver
+DESCRIPTION:Gruppe G – Matchday 3
+ERGEBNIS: Neuseeland 1-5 Belgien ✅\nStadion: BC Place, Vancouver
 LOCATION:BC Place, Vancouver Canada
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k26-06@radlgruber
-SUMMARY:🇪🇬 Ägypten vs. Iran – Gruppe G
+SUMMARY:🇪🇬 Ägypten vs. Iran – Gruppe G ✅ 1:1
 DTSTART:20260627T030000Z
 DTEND:20260627T050000Z
-DESCRIPTION:Gruppe G – Matchday 3 (parallel)\nAnpfiff: 05:00 Uhr MESZ\nStadion: Lumen Field, Seattle
+DESCRIPTION:Gruppe G – Matchday 3 (parallel)
+ERGEBNIS: Ägypten 1-1 Iran ✅\nStadion: Lumen Field, Seattle
 LOCATION:Lumen Field, Seattle
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k27-01@radlgruber
-SUMMARY:🏴󠁧󠁢󠁥󠁮󠁧󠁿 Panama vs. England – Gruppe L
+SUMMARY:🏴󠁧󠁢󠁥󠁮󠁧󠁿 Panama vs. England – Gruppe L ✅ 0:2
 DTSTART:20260627T210000Z
 DTEND:20260627T230000Z
-DESCRIPTION:Gruppe L – Matchday 3\nAnpfiff: 23:00 Uhr MESZ\nStadion: MetLife Stadium, East Rutherford NJ
+DESCRIPTION:Gruppe L – Matchday 3
+ERGEBNIS: Panama 0-2 England ✅\nStadion: MetLife Stadium, East Rutherford NJ
 LOCATION:MetLife Stadium, East Rutherford NJ
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k27-02@radlgruber
-SUMMARY:🇭🇷 Kroatien vs. Ghana – Gruppe L
+SUMMARY:🇭🇷 Kroatien vs. Ghana – Gruppe L ✅ 2:1
 DTSTART:20260627T210000Z
 DTEND:20260627T230000Z
-DESCRIPTION:Gruppe L – Matchday 3 (parallel)\nAnpfiff: 23:00 Uhr MESZ\nStadion: Lincoln Financial Field, Philadelphia
+DESCRIPTION:Gruppe L – Matchday 3 (parallel)
+ERGEBNIS: Kroatien 2-1 Ghana ✅\nStadion: Lincoln Financial Field, Philadelphia
 LOCATION:Lincoln Financial Field, Philadelphia
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k27-03@radlgruber
-SUMMARY:🇨🇴 Kolumbien vs. 🇵🇹 Portugal – Gruppe K
+SUMMARY:🇨🇴 Kolumbien vs. 🇵🇹 Portugal – Gruppe K ✅ 0:0
 DTSTART:20260627T233000Z
 DTEND:20260628T013000Z
-DESCRIPTION:Gruppe K – Matchday 3\nAnpfiff: 01:30 Uhr MESZ (28. Juni)\nStadion: Hard Rock Stadium, Miami
+DESCRIPTION:Gruppe K – Matchday 3
+ERGEBNIS: Kolumbien 0-0 Portugal ✅\nStadion: Hard Rock Stadium, Miami
 LOCATION:Hard Rock Stadium, Miami Gardens FL
 END:VEVENT
 
@@ -360,19 +386,21 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k27-05@radlgruber
-SUMMARY:🇩🇿 Algerien vs. 🇦🇹 Österreich – Gruppe J ⭐
+SUMMARY:🇩🇿 Algerien vs. 🇦🇹 Österreich – Gruppe J ✅ 3:3
 DTSTART:20260628T020000Z
 DTEND:20260628T040000Z
-DESCRIPTION:Gruppe J – Letztes Gruppenspiel Österreich\nAnpfiff: 04:00 Uhr MESZ\nStadion: Arrowhead Stadium, Kansas City
+DESCRIPTION:Gruppe J – Letztes Gruppenspiel Österreich
+ERGEBNIS: Algerien 3-3 Österreich ✅\nStadion: Arrowhead Stadium, Kansas City
 LOCATION:Arrowhead Stadium, Kansas City
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k27-06@radlgruber
-SUMMARY:🇯🇴 Jordanien vs. 🇦🇷 Argentinien – Gruppe J ⭐
+SUMMARY:🇯🇴 Jordanien vs. 🇦🇷 Argentinien – Gruppe J ✅ 1:3
 DTSTART:20260628T020000Z
 DTEND:20260628T040000Z
-DESCRIPTION:Gruppe J – Letztes Gruppenspiel Argentinien\nAnpfiff: 04:00 Uhr MESZ\nStadion: AT&T Stadium, Arlington/Dallas
+DESCRIPTION:Gruppe J – Letztes Gruppenspiel Argentinien
+ERGEBNIS: Jordanien 1-3 Argentinien ✅\nStadion: AT&T Stadium, Arlington/Dallas
 LOCATION:AT&T Stadium, Arlington Texas
 END:VEVENT
 
@@ -441,19 +469,19 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-08@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 80 (Atlanta)
+SUMMARY:⚽ Sechzehntelfinale – 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. ⚽ Congo DR
 DTSTART:20260701T160000Z
 DTEND:20260701T180000Z
-DESCRIPTION:Round of 32 – Match 80\nSieger Gruppe L vs. Bester Dritter E/H/I/J/K\nAnpfiff: 18:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
+DESCRIPTION:🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. ⚽ Congo DR\nRound of 32 – Match 80\n vs. \nAnpfiff: 18:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
 LOCATION:Mercedes-Benz Stadium, Atlanta
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-09@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 82 (Seattle)
+SUMMARY:⚽ Sechzehntelfinale – 🇧🇪 Belgien vs. 🇸🇳 Senegal
 DTSTART:20260701T200000Z
 DTEND:20260701T220000Z
-DESCRIPTION:Round of 32 – Match 82\nSieger Gruppe G vs. Bester Dritter A/E/H/I/J\nAnpfiff: 22:00 Uhr MESZ\nStadion: Lumen Field, Seattle
+DESCRIPTION:🇧🇪 Belgien vs. 🇸🇳 Senegal\nRound of 32 – Match 82\n vs. \nAnpfiff: 22:00 Uhr MESZ\nStadion: Lumen Field, Seattle
 LOCATION:Lumen Field, Seattle
 END:VEVENT
 
@@ -468,55 +496,55 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-11@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 84 (Los Angeles)
+SUMMARY:⚽ Sechzehntelfinale – 🇪🇸 Spanien vs. 🇦🇹 Österreich
 DTSTART:20260702T190000Z
 DTEND:20260702T210000Z
-DESCRIPTION:Round of 32 – Match 84\nSieger Gruppe H vs. Zweiter Gruppe J\nAnpfiff: 21:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
+DESCRIPTION:🇪🇸 Spanien vs. 🇦🇹 Österreich\nRound of 32 – Match 84\n vs. \nAnpfiff: 21:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
 LOCATION:SoFi Stadium, Inglewood CA
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-12@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 83 (Toronto)
+SUMMARY:⚽ Sechzehntelfinale – 🇵🇹 Portugal vs. 🇭🇷 Kroatien
 DTSTART:20260702T230000Z
 DTEND:20260703T010000Z
-DESCRIPTION:Round of 32 – Match 83\nZweiter Gruppe K vs. Zweiter Gruppe L\nAnpfiff: 01:00 Uhr MESZ (3. Juli)\nStadion: BMO Field, Toronto
+DESCRIPTION:🇵🇹 Portugal vs. 🇭🇷 Kroatien\nRound of 32 – Match 83\n vs. \nAnpfiff: 01:00 Uhr MESZ (3. Juli)\nStadion: BMO Field, Toronto
 LOCATION:BMO Field, Toronto Canada
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-13@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 85 (Vancouver)
+SUMMARY:⚽ Sechzehntelfinale – 🇨🇭 Schweiz vs. 🇩🇿 Algerien
 DTSTART:20260703T030000Z
 DTEND:20260703T050000Z
-DESCRIPTION:Round of 32 – Match 85\nSieger Gruppe B vs. Bester Dritter E/F/G/I/J\nAnpfiff: 05:00 Uhr MESZ\nStadion: BC Place, Vancouver
+DESCRIPTION:🇨🇭 Schweiz vs. 🇩🇿 Algerien\nRound of 32 – Match 85\n vs. \nAnpfiff: 05:00 Uhr MESZ\nStadion: BC Place, Vancouver
 LOCATION:BC Place, Vancouver Canada
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-14@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 88 (Dallas)
+SUMMARY:⚽ Sechzehntelfinale – 🇦🇺 Australien vs. 🇪🇬 Ägypten
 DTSTART:20260703T180000Z
 DTEND:20260703T200000Z
-DESCRIPTION:Round of 32 – Match 88\nZweiter Gruppe D vs. Zweiter Gruppe G\nAnpfiff: 20:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
+DESCRIPTION:🇦🇺 Australien vs. 🇪🇬 Ägypten\nRound of 32 – Match 88\n vs. \nAnpfiff: 20:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
 LOCATION:AT&T Stadium, Arlington Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-15@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 86 (Miami)
+SUMMARY:⚽ Sechzehntelfinale – 🇦🇷 Argentinien vs. 🇨🇻 Kap Verde
 DTSTART:20260703T220000Z
 DTEND:20260704T000000Z
-DESCRIPTION:Round of 32 – Match 86\nSieger Gruppe J vs. Zweiter Gruppe H\nAnpfiff: 00:00 Uhr MESZ (4. Juli)\nStadion: Hard Rock Stadium, Miami
+DESCRIPTION:🇦🇷 Argentinien vs. 🇨🇻 Kap Verde\nRound of 32 – Match 86\n vs. \nAnpfiff: 00:00 Uhr MESZ (4. Juli)\nStadion: Hard Rock Stadium, Miami
 LOCATION:Hard Rock Stadium, Miami Gardens FL
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-16@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 87 (Kansas City)
+SUMMARY:⚽ Sechzehntelfinale – 🇨🇴 Kolumbien vs. 🇬🇭 Ghana
 DTSTART:20260704T013000Z
 DTEND:20260704T033000Z
-DESCRIPTION:Round of 32 – Match 87\nSieger Gruppe K vs. Bester Dritter D/E/I/J/L\nAnpfiff: 03:30 Uhr MESZ\nStadion: Arrowhead Stadium, Kansas City
+DESCRIPTION:🇨🇴 Kolumbien vs. 🇬🇭 Ghana\nRound of 32 – Match 87\n vs. \nAnpfiff: 03:30 Uhr MESZ\nStadion: Arrowhead Stadium, Kansas City
 LOCATION:Arrowhead Stadium, Kansas City
 END:VEVENT
 
