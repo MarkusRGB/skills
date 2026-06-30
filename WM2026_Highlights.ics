@@ -158,10 +158,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k23-04@radlgruber
-SUMMARY:🇨🇴 Kolumbien vs. DR Kongo – Gruppe K
+SUMMARY:🇨🇴 Kolumbien vs. DR Kongo – Gruppe K ✅ 1:0
 DTSTART:20260624T040000Z
 DTEND:20260624T060000Z
-DESCRIPTION:Gruppe K – Matchday 2\nAnpfiff: 04:00 Uhr MESZ\nStadion: Estadio Akron, Guadalajara MX
+DESCRIPTION:Gruppe K – Matchday 2
+ERGEBNIS: Kolumbien 1-0 DR Kongo ✅\nStadion: Estadio Akron, Guadalajara MX
 LOCATION:Estadio Akron, Guadalajara Mexico
 END:VEVENT
 
@@ -377,10 +378,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-k27-04@radlgruber
-SUMMARY:🇨🇩 DR Kongo vs. Usbekistan – Gruppe K
+SUMMARY:🇨🇩 DR Kongo vs. Usbekistan – Gruppe K ✅ 3:1
 DTSTART:20260627T233000Z
 DTEND:20260628T013000Z
-DESCRIPTION:Gruppe K – Matchday 3 (parallel)\nAnpfiff: 01:30 Uhr MESZ (28. Juni)\nStadion: Mercedes-Benz Stadium, Atlanta
+DESCRIPTION:Gruppe K – Matchday 3 (parallel)
+ERGEBNIS: DR Kongo 3-1 Usbekistan ✅\nStadion: Mercedes-Benz Stadium, Atlanta
 LOCATION:Mercedes-Benz Stadium, Atlanta
 END:VEVENT
 
@@ -406,74 +408,90 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-01@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 78 (Los Angeles)
-DTSTART:20260628T170000Z
-DTEND:20260628T190000Z
-DESCRIPTION:Round of 32 – Match 78\nZweiter Gruppe A vs. Zweiter Gruppe B\nAnpfiff: 19:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
-LOCATION:SoFi Stadium, Inglewood CA
+SUMMARY:⚽ Sechzehntelfinale – 🇿🇦 Südafrika vs. 🇨🇦 Kanada ✅ 0:1
+DTSTART:20260628T190000Z
+DTEND:20260628T210000Z
+DESCRIPTION:Südafrika vs. Kanada — ERGEBNIS 0:1 ✅
+Anpfiff: 21:00 Uhr MESZ
+Stadion: SoFi Stadium, Inglewood, California
+LOCATION:SoFi Stadium, Inglewood, California
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-02@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 73 (Houston)
-DTSTART:20260629T190000Z
-DTEND:20260629T210000Z
-DESCRIPTION:Round of 32 – Match 73\nSieger Gruppe C vs. Zweiter Gruppe F\nAnpfiff: 21:00 Uhr MESZ\nStadion: NRG Stadium, Houston
-LOCATION:NRG Stadium, Houston
+SUMMARY:⚽ Sechzehntelfinale – 🇧🇷 Brasilien vs. 🇯🇵 Japan ✅ 2:1
+DTSTART:20260629T170000Z
+DTEND:20260629T190000Z
+DESCRIPTION:Brasilien vs. Japan — ERGEBNIS 2:1 ✅
+Anpfiff: 19:00 Uhr MESZ
+Stadion: NRG Stadium, Houston, Texas
+LOCATION:NRG Stadium, Houston, Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-03@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 74 (Boston)
-DTSTART:20260629T223000Z
-DTEND:20260630T003000Z
-DESCRIPTION:Round of 32 – Match 74\nSieger Gruppe E vs. Bester Dritter A/B/C/D/F\nAnpfiff: 00:30 Uhr MESZ (30. Juni)\nStadion: Gillette Stadium, Boston
-LOCATION:Gillette Stadium, Foxborough MA
+SUMMARY:⚽ Sechzehntelfinale – 🇩🇪 Deutschland vs. 🇵🇾 Paraguay ✅ 1:1
+DTSTART:20260629T203000Z
+DTEND:20260629T223000Z
+DESCRIPTION:Deutschland vs. Paraguay — ERGEBNIS 1:1 ✅
+Anpfiff: 22:30 Uhr MESZ
+Stadion: Gillette Stadium, Foxborough, Massachusetts
+LOCATION:Gillette Stadium, Foxborough, Massachusetts
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-04@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 75 (Monterrey)
-DTSTART:20260630T030000Z
-DTEND:20260630T050000Z
-DESCRIPTION:Round of 32 – Match 75\nSieger Gruppe F vs. Zweiter Gruppe C\nAnpfiff: 05:00 Uhr MESZ\nStadion: Estadio BBVA, Monterrey MX
-LOCATION:Estadio BBVA, Monterrey Mexico
+SUMMARY:⚽ Sechzehntelfinale – 🇳🇱 Niederlande vs. 🇲🇦 Marokko ✅ 1:1
+DTSTART:20260630T010000Z
+DTEND:20260630T030000Z
+DESCRIPTION:Niederlande vs. Marokko — ERGEBNIS 1:1 ✅
+Anpfiff: 03:00 Uhr MESZ
+Stadion: Estadio BBVA, Guadalupe
+LOCATION:Estadio BBVA, Guadalupe
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-05@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 76 (Dallas)
-DTSTART:20260630T190000Z
-DTEND:20260630T210000Z
-DESCRIPTION:Round of 32 – Match 76\nZweiter Gruppe E vs. Zweiter Gruppe I\nAnpfiff: 21:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
-LOCATION:AT&T Stadium, Arlington Texas
+SUMMARY:⚽ Sechzehntelfinale – 🇨🇮 Elfenbeinküste vs. 🇳🇴 Norwegen
+DTSTART:20260630T170000Z
+DTEND:20260630T190000Z
+DESCRIPTION:Elfenbeinküste vs. Norwegen
+Anpfiff: 19:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
+LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-06@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 77 (New Jersey)
-DTSTART:20260630T230000Z
-DTEND:20260701T010000Z
-DESCRIPTION:Round of 32 – Match 77\nSieger Gruppe I vs. Bester Dritter C/D/F/G/H\nAnpfiff: 01:00 Uhr MESZ (1. Juli)\nStadion: MetLife Stadium, New Jersey
-LOCATION:MetLife Stadium, East Rutherford NJ
+SUMMARY:⚽ Sechzehntelfinale – 🇫🇷 Frankreich vs. 🇸🇪 Schweden
+DTSTART:20260630T210000Z
+DTEND:20260630T230000Z
+DESCRIPTION:Frankreich vs. Schweden
+Anpfiff: 23:00 Uhr MESZ
+Stadion: MetLife Stadium, East Rutherford, New Jersey
+LOCATION:MetLife Stadium, East Rutherford, New Jersey
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-07@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 79 (Mexico City)
-DTSTART:20260701T030000Z
-DTEND:20260701T050000Z
-DESCRIPTION:Round of 32 – Match 79\nSieger Gruppe A vs. Bester Dritter C/E/F/H/I\nAnpfiff: 05:00 Uhr MESZ\nStadion: Estadio Azteca, Mexico City
-LOCATION:Estadio Azteca, Mexico City
+SUMMARY:⚽ Sechzehntelfinale – 🇲🇽 Mexiko vs. 🇪🇨 Ecuador
+DTSTART:20260701T010000Z
+DTEND:20260701T030000Z
+DESCRIPTION:Mexiko vs. Ecuador
+Anpfiff: 03:00 Uhr MESZ
+Stadion: Estadio Banorte, Mexico City
+LOCATION:Estadio Banorte, Mexico City
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-08@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. ⚽ Congo DR
+SUMMARY:⚽ Sechzehntelfinale – 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. 🇨🇩 DR Kongo
 DTSTART:20260701T160000Z
 DTEND:20260701T180000Z
-DESCRIPTION:🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs. ⚽ Congo DR\nRound of 32 – Match 80\n vs. \nAnpfiff: 18:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
-LOCATION:Mercedes-Benz Stadium, Atlanta
+DESCRIPTION:England vs. DR Kongo
+Anpfiff: 18:00 Uhr MESZ
+Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
+LOCATION:Mercedes-Benz Stadium, Atlanta, Georgia
 END:VEVENT
 
 BEGIN:VEVENT
@@ -481,17 +499,21 @@ UID:wm2026-r32-09@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇧🇪 Belgien vs. 🇸🇳 Senegal
 DTSTART:20260701T200000Z
 DTEND:20260701T220000Z
-DESCRIPTION:🇧🇪 Belgien vs. 🇸🇳 Senegal\nRound of 32 – Match 82\n vs. \nAnpfiff: 22:00 Uhr MESZ\nStadion: Lumen Field, Seattle
-LOCATION:Lumen Field, Seattle
+DESCRIPTION:Belgien vs. Senegal
+Anpfiff: 22:00 Uhr MESZ
+Stadion: Lumen Field, Seattle, Washington
+LOCATION:Lumen Field, Seattle, Washington
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-10@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – Match 81 (San Francisco)
-DTSTART:20260702T020000Z
-DTEND:20260702T040000Z
-DESCRIPTION:Round of 32 – Match 81\nSieger Gruppe D vs. Bester Dritter B/E/F/I/J\nAnpfiff: 04:00 Uhr MESZ\nStadion: Levi's Stadium, San Francisco
-LOCATION:Levi's Stadium, Santa Clara CA
+SUMMARY:⚽ Sechzehntelfinale – 🇺🇸 USA vs. 🇧🇦 Bosnien-Herzegowina
+DTSTART:20260702T000000Z
+DTEND:20260702T020000Z
+DESCRIPTION:USA vs. Bosnien-Herzegowina
+Anpfiff: 02:00 Uhr MESZ
+Stadion: Levi's Stadium, Santa Clara, California
+LOCATION:Levi's Stadium, Santa Clara, California
 END:VEVENT
 
 BEGIN:VEVENT
@@ -499,8 +521,10 @@ UID:wm2026-r32-11@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇪🇸 Spanien vs. 🇦🇹 Österreich
 DTSTART:20260702T190000Z
 DTEND:20260702T210000Z
-DESCRIPTION:🇪🇸 Spanien vs. 🇦🇹 Österreich\nRound of 32 – Match 84\n vs. \nAnpfiff: 21:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
-LOCATION:SoFi Stadium, Inglewood CA
+DESCRIPTION:Spanien vs. Österreich
+Anpfiff: 21:00 Uhr MESZ
+Stadion: SoFi Stadium, Inglewood, California
+LOCATION:SoFi Stadium, Inglewood, California
 END:VEVENT
 
 BEGIN:VEVENT
@@ -508,8 +532,10 @@ UID:wm2026-r32-12@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇵🇹 Portugal vs. 🇭🇷 Kroatien
 DTSTART:20260702T230000Z
 DTEND:20260703T010000Z
-DESCRIPTION:🇵🇹 Portugal vs. 🇭🇷 Kroatien\nRound of 32 – Match 83\n vs. \nAnpfiff: 01:00 Uhr MESZ (3. Juli)\nStadion: BMO Field, Toronto
-LOCATION:BMO Field, Toronto Canada
+DESCRIPTION:Portugal vs. Kroatien
+Anpfiff: 01:00 Uhr MESZ
+Stadion: BMO Field, Toronto
+LOCATION:BMO Field, Toronto
 END:VEVENT
 
 BEGIN:VEVENT
@@ -517,8 +543,10 @@ UID:wm2026-r32-13@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇨🇭 Schweiz vs. 🇩🇿 Algerien
 DTSTART:20260703T030000Z
 DTEND:20260703T050000Z
-DESCRIPTION:🇨🇭 Schweiz vs. 🇩🇿 Algerien\nRound of 32 – Match 85\n vs. \nAnpfiff: 05:00 Uhr MESZ\nStadion: BC Place, Vancouver
-LOCATION:BC Place, Vancouver Canada
+DESCRIPTION:Schweiz vs. Algerien
+Anpfiff: 05:00 Uhr MESZ
+Stadion: BC Place, Vancouver
+LOCATION:BC Place, Vancouver
 END:VEVENT
 
 BEGIN:VEVENT
@@ -526,8 +554,10 @@ UID:wm2026-r32-14@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇦🇺 Australien vs. 🇪🇬 Ägypten
 DTSTART:20260703T180000Z
 DTEND:20260703T200000Z
-DESCRIPTION:🇦🇺 Australien vs. 🇪🇬 Ägypten\nRound of 32 – Match 88\n vs. \nAnpfiff: 20:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
-LOCATION:AT&T Stadium, Arlington Texas
+DESCRIPTION:Australien vs. Ägypten
+Anpfiff: 20:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
+LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
 BEGIN:VEVENT
@@ -535,8 +565,10 @@ UID:wm2026-r32-15@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇦🇷 Argentinien vs. 🇨🇻 Kap Verde
 DTSTART:20260703T220000Z
 DTEND:20260704T000000Z
-DESCRIPTION:🇦🇷 Argentinien vs. 🇨🇻 Kap Verde\nRound of 32 – Match 86\n vs. \nAnpfiff: 00:00 Uhr MESZ (4. Juli)\nStadion: Hard Rock Stadium, Miami
-LOCATION:Hard Rock Stadium, Miami Gardens FL
+DESCRIPTION:Argentinien vs. Kap Verde
+Anpfiff: 00:00 Uhr MESZ
+Stadion: Hard Rock Stadium, Miami Gardens, Florida
+LOCATION:Hard Rock Stadium, Miami Gardens, Florida
 END:VEVENT
 
 BEGIN:VEVENT
@@ -544,152 +576,186 @@ UID:wm2026-r32-16@radlgruber
 SUMMARY:⚽ Sechzehntelfinale – 🇨🇴 Kolumbien vs. 🇬🇭 Ghana
 DTSTART:20260704T013000Z
 DTEND:20260704T033000Z
-DESCRIPTION:🇨🇴 Kolumbien vs. 🇬🇭 Ghana\nRound of 32 – Match 87\n vs. \nAnpfiff: 03:30 Uhr MESZ\nStadion: Arrowhead Stadium, Kansas City
-LOCATION:Arrowhead Stadium, Kansas City
+DESCRIPTION:Kolumbien vs. Ghana
+Anpfiff: 03:30 Uhr MESZ
+Stadion: GEHA Field at Arrowhead Stadium, Kansas City, Missouri
+LOCATION:GEHA Field at Arrowhead Stadium, Kansas City, Missouri
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-01@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 90 (Houston)
-DTSTART:20260704T190000Z
-DTEND:20260704T210000Z
-DESCRIPTION:Round of 16\nSieger Match 73 vs. Sieger Match 75\nAnpfiff: 21:00 Uhr MESZ\nStadion: NRG Stadium, Houston
-LOCATION:NRG Stadium, Houston
+SUMMARY:🔥 Achtelfinale – 🇨🇦 Kanada vs. 🇲🇦 Marokko
+DTSTART:20260704T170000Z
+DTEND:20260704T190000Z
+DESCRIPTION:Kanada vs. Marokko
+Anpfiff: 19:00 Uhr MESZ
+Stadion: NRG Stadium, Houston, Texas
+LOCATION:NRG Stadium, Houston, Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-02@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 89 (Philadelphia)
-DTSTART:20260704T230000Z
-DTEND:20260705T010000Z
-DESCRIPTION:Round of 16\nSieger Match 74 vs. Sieger Match 77\nAnpfiff: 01:00 Uhr MESZ (5. Juli)\nStadion: Lincoln Financial Field, Philadelphia
-LOCATION:Lincoln Financial Field, Philadelphia
+SUMMARY:🔥 Achtelfinale – Philadelphia
+DTSTART:20260704T210000Z
+DTEND:20260704T230000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 23:00 Uhr MESZ
+Stadion: Lincoln Financial Field, Philadelphia, Pennsylvania
+LOCATION:Lincoln Financial Field, Philadelphia, Pennsylvania
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-03@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 91 (New Jersey)
-DTSTART:20260705T220000Z
-DTEND:20260706T000000Z
-DESCRIPTION:Round of 16\nSieger Match 76 vs. Sieger Match 78\nAnpfiff: 00:00 Uhr MESZ (6. Juli)\nStadion: MetLife Stadium, New Jersey
-LOCATION:MetLife Stadium, East Rutherford NJ
+SUMMARY:🔥 Achtelfinale – East Rutherford
+DTSTART:20260705T200000Z
+DTEND:20260705T220000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 22:00 Uhr MESZ
+Stadion: MetLife Stadium, East Rutherford, New Jersey
+LOCATION:MetLife Stadium, East Rutherford, New Jersey
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-04@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 92 (Mexico City)
-DTSTART:20260706T020000Z
-DTEND:20260706T040000Z
-DESCRIPTION:Round of 16\nSieger Match 79 vs. Sieger Match 80\nAnpfiff: 04:00 Uhr MESZ\nStadion: Estadio Azteca, Mexico City
-LOCATION:Estadio Azteca, Mexico City
+SUMMARY:🔥 Achtelfinale – Mexico City
+DTSTART:20260706T000000Z
+DTEND:20260706T020000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 02:00 Uhr MESZ
+Stadion: Estadio Banorte, Mexico City
+LOCATION:Estadio Banorte, Mexico City
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-05@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 93 (Dallas)
-DTSTART:20260706T210000Z
-DTEND:20260706T230000Z
-DESCRIPTION:Round of 16\nSieger Match 83 vs. Sieger Match 84\nAnpfiff: 23:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
-LOCATION:AT&T Stadium, Arlington Texas
+SUMMARY:🔥 Achtelfinale – Arlington
+DTSTART:20260706T190000Z
+DTEND:20260706T210000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
+LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-06@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 94 (Seattle)
-DTSTART:20260707T020000Z
-DTEND:20260707T040000Z
-DESCRIPTION:Round of 16\nSieger Match 81 vs. Sieger Match 82\nAnpfiff: 04:00 Uhr MESZ\nStadion: Lumen Field, Seattle
-LOCATION:Lumen Field, Seattle
+SUMMARY:🔥 Achtelfinale – Seattle
+DTSTART:20260707T000000Z
+DTEND:20260707T020000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 02:00 Uhr MESZ
+Stadion: Lumen Field, Seattle, Washington
+LOCATION:Lumen Field, Seattle, Washington
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-07@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 95 (Atlanta)
-DTSTART:20260707T180000Z
-DTEND:20260707T200000Z
-DESCRIPTION:Round of 16\nSieger Match 86 vs. Sieger Match 88\nAnpfiff: 20:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
-LOCATION:Mercedes-Benz Stadium, Atlanta
+SUMMARY:🔥 Achtelfinale – Atlanta
+DTSTART:20260707T160000Z
+DTEND:20260707T180000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 18:00 Uhr MESZ
+Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
+LOCATION:Mercedes-Benz Stadium, Atlanta, Georgia
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-08@radlgruber
-SUMMARY:🔥 Achtelfinale – Match 96 (Vancouver)
-DTSTART:20260707T220000Z
-DTEND:20260708T000000Z
-DESCRIPTION:Round of 16\nSieger Match 85 vs. Sieger Match 87\nAnpfiff: 00:00 Uhr MESZ (8. Juli)\nStadion: BC Place, Vancouver
-LOCATION:BC Place, Vancouver Canada
+SUMMARY:🔥 Achtelfinale – Vancouver
+DTSTART:20260707T200000Z
+DTEND:20260707T220000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 22:00 Uhr MESZ
+Stadion: BC Place, Vancouver
+LOCATION:BC Place, Vancouver
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-qf-01@radlgruber
-SUMMARY:🏅 VIERTELFINALE 1 – Boston
+SUMMARY:🏅 VIERTELFINALE – Foxborough
 DTSTART:20260709T200000Z
 DTEND:20260709T220000Z
-DESCRIPTION:Viertelfinale 1\nSieger Match 89 vs. Sieger Match 90\nAnpfiff: 22:00 Uhr MESZ\nStadion: Gillette Stadium, Boston
-LOCATION:Gillette Stadium, Foxborough MA
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 22:00 Uhr MESZ
+Stadion: Gillette Stadium, Foxborough, Massachusetts
+LOCATION:Gillette Stadium, Foxborough, Massachusetts
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-qf-02@radlgruber
-SUMMARY:🏅 VIERTELFINALE 2 – Los Angeles
+SUMMARY:🏅 VIERTELFINALE – Inglewood
 DTSTART:20260710T190000Z
 DTEND:20260710T210000Z
-DESCRIPTION:Viertelfinale 2\nSieger Match 91 vs. Sieger Match 92\nAnpfiff: 21:00 Uhr MESZ\nStadion: SoFi Stadium, Los Angeles
-LOCATION:SoFi Stadium, Inglewood CA
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: SoFi Stadium, Inglewood, California
+LOCATION:SoFi Stadium, Inglewood, California
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-qf-03@radlgruber
-SUMMARY:🏅 VIERTELFINALE 3 – Miami
-DTSTART:20260711T230000Z
-DTEND:20260712T010000Z
-DESCRIPTION:Viertelfinale 3\nSieger Match 95 vs. Sieger Match 96\nAnpfiff: 01:00 Uhr MESZ (12. Juli)\nStadion: Hard Rock Stadium, Miami
-LOCATION:Hard Rock Stadium, Miami Gardens FL
+SUMMARY:🏅 VIERTELFINALE – Miami Gardens
+DTSTART:20260711T210000Z
+DTEND:20260711T230000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 23:00 Uhr MESZ
+Stadion: Hard Rock Stadium, Miami Gardens, Florida
+LOCATION:Hard Rock Stadium, Miami Gardens, Florida
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-qf-04@radlgruber
-SUMMARY:🏅 VIERTELFINALE 4 – Kansas City
-DTSTART:20260712T030000Z
-DTEND:20260712T050000Z
-DESCRIPTION:Viertelfinale 4\nSieger Match 93 vs. Sieger Match 94\nAnpfiff: 05:00 Uhr MESZ\nStadion: Arrowhead Stadium, Kansas City
-LOCATION:Arrowhead Stadium, Kansas City
+SUMMARY:🏅 VIERTELFINALE – Kansas City
+DTSTART:20260712T010000Z
+DTEND:20260712T030000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 03:00 Uhr MESZ
+Stadion: GEHA Field at Arrowhead Stadium, Kansas City, Missouri
+LOCATION:GEHA Field at Arrowhead Stadium, Kansas City, Missouri
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-sf-01@radlgruber
-SUMMARY:🔴 HALBFINALE 1 – Dallas
-DTSTART:20260714T210000Z
-DTEND:20260714T230000Z
-DESCRIPTION:Halbfinale 1\nAnpfiff: 23:00 Uhr MESZ\nStadion: AT&T Stadium, Dallas
-LOCATION:AT&T Stadium, Arlington Texas
+SUMMARY:🔴 HALBFINALE – Arlington
+DTSTART:20260714T190000Z
+DTEND:20260714T210000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
+LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-sf-02@radlgruber
-SUMMARY:🔴 HALBFINALE 2 – Atlanta
-DTSTART:20260715T210000Z
-DTEND:20260715T230000Z
-DESCRIPTION:Halbfinale 2\nAnpfiff: 23:00 Uhr MESZ\nStadion: Mercedes-Benz Stadium, Atlanta
-LOCATION:Mercedes-Benz Stadium, Atlanta
+SUMMARY:🔴 HALBFINALE – Atlanta
+DTSTART:20260715T190000Z
+DTEND:20260715T210000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
+LOCATION:Mercedes-Benz Stadium, Atlanta, Georgia
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-3rd@radlgruber
-SUMMARY:🥉 SPIEL UM PLATZ 3 – Miami
-DTSTART:20260718T230000Z
-DTEND:20260719T010000Z
-DESCRIPTION:Spiel um Platz 3\nAnpfiff: 01:00 Uhr MESZ (19. Juli)\nStadion: Hard Rock Stadium, Miami
-LOCATION:Hard Rock Stadium, Miami Gardens FL
+SUMMARY:🥉 SPIEL UM PLATZ 3 – Miami Gardens
+DTSTART:20260718T210000Z
+DTEND:20260718T230000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 23:00 Uhr MESZ
+Stadion: Hard Rock Stadium, Miami Gardens, Florida
+LOCATION:Hard Rock Stadium, Miami Gardens, Florida
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-final@radlgruber
-SUMMARY:🏆 WM 2026 FINALE – New York/New Jersey
-DTSTART:20260719T210000Z
-DTEND:20260719T230000Z
-DESCRIPTION:WM 2026 FINALE!\nAnpfiff: 21:00 Uhr MESZ\nStadion: MetLife Stadium, East Rutherford NJ
-LOCATION:MetLife Stadium, East Rutherford NJ
+SUMMARY:🏆 WM 2026 FINALE – East Rutherford
+DTSTART:20260719T190000Z
+DTEND:20260719T210000Z
+DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: MetLife Stadium, East Rutherford, New Jersey
+LOCATION:MetLife Stadium, East Rutherford, New Jersey
 END:VEVENT
 
 END:VCALENDAR

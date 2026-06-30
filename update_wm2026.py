@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
 """
-Update WM2026_Highlights.ics with live results AND team names from ESPN API.
-- Completed matches: adds score + ✅ to SUMMARY
-- Scheduled matches: fills in real team names once known (replaces "Sieger Gruppe X")
+Update WM2026_Highlights.ics with live results from ESPN API.
+
+Two passes:
+1. Group stage (UIDs wm2026-001..013, wm2026-k23..k27-*): match by team
+   names appearing in SUMMARY, add ✅ score once a game is completed.
+2. Knockout stage (wm2026-r32-*, wm2026-r16-*, wm2026-qf-*, wm2026-sf-*,
+   wm2026-3rd, wm2026-final): the original calendar used placeholder
+   dates/teams that don't line up with the real bracket. Real knockout
+   fixtures are fetched from ESPN and applied *positionally* (both lists
+   sorted chronologically, zipped 1:1) since round sizes always match
+   (16 / 8 / 4 / 2 / 1 / 1). This replaces DTSTART/DTEND/SUMMARY/
+   DESCRIPTION/LOCATION with the real date, time, teams and venue.
+
 Runs automatically via GitHub Actions every 30 minutes.
 """
 import re
@@ -12,74 +22,27 @@ from datetime import datetime, timezone, timedelta
 
 ICS_FILE = "WM2026_Highlights.ics"
 
-# ESPN team names -> German/display names used in the .ics
 TEAM_NAMES = {
-    "Austria": "Österreich",
-    "Germany": "Deutschland",
-    "Netherlands": "Niederlande",
-    "France": "Frankreich",
-    "Spain": "Spanien",
-    "Brazil": "Brasilien",
-    "Argentina": "Argentinien",
-    "Croatia": "Kroatien",
-    "Switzerland": "Schweiz",
-    "Morocco": "Marokko",
-    "Algeria": "Algerien",
-    "Jordan": "Jordanien",
-    "Ivory Coast": "Elfenbeinküste",
-    "Curaçao": "Curaçao",
-    "Sweden": "Schweden",
-    "Tunisia": "Tunesien",
-    "Türkiye": "Türkei",
-    "Turkey": "Türkei",
-    "Colombia": "Kolumbien",
-    "DR Congo": "DR Kongo",
-    "Congo": "DR Kongo",
-    "Uzbekistan": "Usbekistan",
-    "Scotland": "Schottland",
-    "Bosnia & Herzegovina": "Bosnien-Herzegowina",
-    "Bosnia-Herzegovina": "Bosnien-Herzegowina",
-    "Qatar": "Katar",
-    "Canada": "Kanada",
-    "Czech Republic": "Tschechien",
-    "Czechia": "Tschechien",
-    "Mexico": "Mexiko",
-    "South Africa": "Südafrika",
-    "South Korea": "Südkorea",
-    "Korea Republic": "Südkorea",
-    "Norway": "Norwegen",
-    "Iraq": "Irak",
-    "Cape Verde": "Kap Verde",
-    "Saudi Arabia": "Saudi-Arabien",
-    "Belgium": "Belgien",
-    "Egypt": "Ägypten",
-    "Ecuador": "Ecuador",
-    "New Zealand": "Neuseeland",
-    "Australia": "Australien",
-    "Paraguay": "Paraguay",
-    "United States": "USA",
-    "USA": "USA",
-    "Panama": "Panama",
-    "Ghana": "Ghana",
-    "Uruguay": "Uruguay",
-    "Senegal": "Senegal",
-    "England": "England",
-    "Portugal": "Portugal",
-    "Japan": "Japan",
-    "Haiti": "Haiti",
-    "Senegal": "Senegal",
-    "Albania": "Albanien",
-    "Serbia": "Serbien",
-    "Ukraine": "Ukraine",
-    "Hungary": "Ungarn",
-    "Romania": "Rumänien",
-    "Poland": "Polen",
-    "Denmark": "Dänemark",
-    "Finland": "Finnland",
-    "Sweden": "Schweden",
+    "Austria": "Österreich", "Germany": "Deutschland", "Netherlands": "Niederlande",
+    "France": "Frankreich", "Spain": "Spanien", "Brazil": "Brasilien",
+    "Argentina": "Argentinien", "Croatia": "Kroatien", "Switzerland": "Schweiz",
+    "Morocco": "Marokko", "Algeria": "Algerien", "Jordan": "Jordanien",
+    "Ivory Coast": "Elfenbeinküste", "Curaçao": "Curaçao", "Sweden": "Schweden",
+    "Tunisia": "Tunesien", "Türkiye": "Türkei", "Turkey": "Türkei",
+    "Colombia": "Kolumbien", "DR Congo": "DR Kongo", "Congo DR": "DR Kongo",
+    "Uzbekistan": "Usbekistan", "Scotland": "Schottland",
+    "Bosnia & Herzegovina": "Bosnien-Herzegowina", "Bosnia-Herzegovina": "Bosnien-Herzegowina",
+    "Qatar": "Katar", "Canada": "Kanada", "Czech Republic": "Tschechien",
+    "Czechia": "Tschechien", "Mexico": "Mexiko", "South Africa": "Südafrika",
+    "South Korea": "Südkorea", "Korea Republic": "Südkorea", "Norway": "Norwegen",
+    "Iraq": "Irak", "Cape Verde": "Kap Verde", "Saudi Arabia": "Saudi-Arabien",
+    "Belgium": "Belgien", "Egypt": "Ägypten", "Ecuador": "Ecuador",
+    "New Zealand": "Neuseeland", "Australia": "Australien", "Paraguay": "Paraguay",
+    "United States": "USA", "USA": "USA", "Panama": "Panama", "Ghana": "Ghana",
+    "Uruguay": "Uruguay", "Senegal": "Senegal", "England": "England",
+    "Portugal": "Portugal", "Japan": "Japan", "Haiti": "Haiti",
 }
 
-# Country flag emojis for German team names
 FLAGS = {
     "Österreich": "🇦🇹", "Deutschland": "🇩🇪", "Niederlande": "🇳🇱",
     "Frankreich": "🇫🇷", "Spanien": "🇪🇸", "Brasilien": "🇧🇷",
@@ -99,19 +62,35 @@ FLAGS = {
     "Japan": "🇯🇵", "Haiti": "🇭🇹",
 }
 
+ROUND_LABELS = {
+    "r32": "⚽ Sechzehntelfinale",
+    "r16": "🔥 Achtelfinale",
+    "qf": "🏅 VIERTELFINALE",
+    "sf": "🔴 HALBFINALE",
+    "3rd": "🥉 SPIEL UM PLATZ 3",
+    "final": "🏆 WM 2026 FINALE",
+}
+
+# Knockout UIDs in bracket order (matches chronological ESPN order 1:1)
+KO_UIDS = (
+    [f"wm2026-r32-{i:02d}@radlgruber" for i in range(1, 17)]
+    + [f"wm2026-r16-{i:02d}@radlgruber" for i in range(1, 9)]
+    + [f"wm2026-qf-{i:02d}@radlgruber" for i in range(1, 5)]
+    + [f"wm2026-sf-{i:02d}@radlgruber" for i in range(1, 3)]
+    + ["wm2026-3rd@radlgruber"]
+    + ["wm2026-final@radlgruber"]
+)
+
 
 def de_name(espn_name):
-    """Convert ESPN team name to German display name."""
     return TEAM_NAMES.get(espn_name, espn_name)
 
 
-def flag(de_name_str):
-    """Get flag emoji for a German team name."""
-    return FLAGS.get(de_name_str, "⚽")
+def flag(name):
+    return FLAGS.get(name, "⚽")
 
 
 def fetch_matches_for_date(date_str):
-    """Fetch all WC 2026 matches (any status) for a given date (YYYYMMDD)."""
     url = (
         f"https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/"
         f"scoreboard?dates={date_str}&limit=50"
@@ -131,175 +110,187 @@ def fetch_matches_for_date(date_str):
         competitors = comp.get("competitors", [])
         if len(competitors) != 2:
             continue
-
         c0, c1 = competitors[0], competitors[1]
-        name0 = c0.get("team", {}).get("displayName", "")
-        name1 = c1.get("team", {}).get("displayName", "")
-        score0 = c0.get("score", "")
-        score1 = c1.get("score", "")
-        date_utc = event.get("date", "")
-
+        venue = comp.get("venue", {})
         matches.append({
-            "state": state,          # "pre", "in", "post"
-            "team0": name0, "score0": score0,
-            "team1": name1, "score1": score1,
-            "date": date_utc,
+            "state": state,
+            "team0": c0.get("team", {}).get("displayName", ""),
+            "score0": c0.get("score", ""),
+            "team1": c1.get("team", {}).get("displayName", ""),
+            "score1": c1.get("score", ""),
+            "date": event.get("date", ""),
+            "venue_name": venue.get("fullName", ""),
+            "venue_city": venue.get("address", {}).get("city", ""),
         })
-
     return matches
 
 
-def fetch_all_matches():
-    """Fetch all matches from tournament start through today + 14 days ahead."""
-    all_matches = []
-    start = datetime(2026, 6, 12, tzinfo=timezone.utc)
-    today = datetime.now(timezone.utc)
-    end = min(today + timedelta(days=14), datetime(2026, 7, 20, tzinfo=timezone.utc))
-
+def fetch_range(start, end):
+    out = []
     current = start
     while current <= end:
         date_str = current.strftime("%Y%m%d")
         print(f"  Fetching {date_str}...")
-        day_matches = fetch_matches_for_date(date_str)
-        all_matches.extend(day_matches)
+        out.extend(fetch_matches_for_date(date_str))
         current += timedelta(days=1)
+    return out
 
-    return all_matches
 
-
-def teams_match_summary(espn_name0, espn_name1, summary):
-    """Check if both ESPN team names appear in the SUMMARY (in either order)."""
-    de0 = de_name(espn_name0).lower()
-    de1 = de_name(espn_name1).lower()
+def teams_in_summary(espn0, espn1, summary):
     s = summary.lower()
-    # Also check original ESPN names
-    e0 = espn_name0.lower()
-    e1 = espn_name1.lower()
-
-    found0 = de0 in s or e0 in s
-    found1 = de1 in s or e1 in s
+    de0, de1 = de_name(espn0).lower(), de_name(espn1).lower()
+    found0 = de0 in s or espn0.lower() in s
+    found1 = de1 in s or espn1.lower() in s
     return found0 and found1
 
 
-def update_ics(matches):
-    """Update the .ics file. Returns True if changed."""
-    with open(ICS_FILE, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    completed = [m for m in matches if m["state"] == "post"]
-    scheduled = [m for m in matches if m["state"] in ("pre", "in")]
-
+def update_group_stage(content, group_matches):
+    completed = [m for m in group_matches if m["state"] == "post"]
     changes = 0
 
-    def process_vevent(block):
+    def process(block):
         nonlocal changes
-
         summary_match = re.search(r"^SUMMARY:(.+)$", block, re.MULTILINE)
-        desc_match = re.search(r"^DESCRIPTION:(.+)$", block, re.MULTILINE)
         if not summary_match:
             return block
-
         summary = summary_match.group(1)
+        if re.search(r"✅\s*\d+:\d+", summary):
+            return block
+
+        desc_match = re.search(r"^DESCRIPTION:(.+)$", block, re.MULTILINE)
         desc = desc_match.group(1) if desc_match else ""
 
-        # ── 1. Update completed matches with scores ───────────────────────
-        if not re.search(r"✅\s*\d+:\d+", summary):
-            for m in completed:
-                if teams_match_summary(m["team0"], m["team1"], summary):
-                    t0 = de_name(m["team0"])
-                    t1 = de_name(m["team1"])
-                    s0, s1 = m["score0"], m["score1"]
+        for m in completed:
+            if teams_in_summary(m["team0"], m["team1"], summary):
+                t0, t1 = de_name(m["team0"]), de_name(m["team1"])
+                s0, s1 = m["score0"], m["score1"]
+                new_summary = re.sub(r"\s*[⭐]\s*(HEUTE!?)?", "", summary).rstrip()
+                new_summary = f"{new_summary} ✅ {s0}:{s1}"
+                block = block.replace(f"SUMMARY:{summary}", f"SUMMARY:{new_summary}", 1)
 
-                    new_summary = re.sub(r"\s*[⭐]\s*(HEUTE!?)?", "", summary).rstrip()
-                    new_summary = f"{new_summary} ✅ {s0}:{s1}"
-                    block = block.replace(f"SUMMARY:{summary}", f"SUMMARY:{new_summary}", 1)
+                if desc and "ERGEBNIS:" not in desc:
+                    result_str = f"ERGEBNIS: {t0} {s0}-{s1} {t1} ✅"
+                    new_desc = re.sub(r"(\\nAnpfiff:[^\\]+)", f"\\n{result_str}", desc, count=1)
+                    if new_desc == desc:
+                        new_desc = desc + f"\\n{result_str}"
+                    block = block.replace(f"DESCRIPTION:{desc}", f"DESCRIPTION:{new_desc}", 1)
 
-                    if desc and "ERGEBNIS:" not in desc:
-                        result_str = f"ERGEBNIS: {t0} {s0}-{s1} {t1} ✅"
-                        new_desc = re.sub(r"(\\nAnpfiff:[^\\]+)", f"\\n{result_str}", desc, count=1)
-                        if new_desc == desc:
-                            new_desc = desc + f"\\n{result_str}"
-                        block = block.replace(f"DESCRIPTION:{desc}", f"DESCRIPTION:{new_desc}", 1)
-
-                    print(f"  ✅ {t0} {s0}-{s1} {t1}")
-                    changes += 1
-                    break
-
-        # ── 2. Fill in team names for knockout matches ────────────────────
-        # These have generic summaries like "⚽ Sechzehntelfinale – Match 78"
-        # and descriptions with "Sieger Gruppe X vs. Zweiter Gruppe Y"
-        is_generic = re.search(r"(Sechzehntelfinale|Achtelfinale|Viertelfinale|Halbfinale|Spiel um Platz|FINALE)\s*[–-]", summary)
-        already_has_teams = re.search(r"(🇦🇹|🇩🇪|🇫🇷|🇧🇷|🇦🇷|🏴󠁧󠁢󠁥󠁮󠁧󠁿|🏴󠁧󠁢󠁳󠁣󠁴󠁿|\w{3,}\s+vs\.?\s+\w{3,})", summary)
-
-        if is_generic and not already_has_teams and not re.search(r"✅\s*\d+:\d+", summary):
-            # Try to match a scheduled/completed match by date proximity
-            # Extract DTSTART to match by time
-            dtstart_match = re.search(r"^DTSTART:(\d{8}T\d{6}Z)$", block, re.MULTILINE)
-            if dtstart_match:
-                event_dt = datetime.strptime(dtstart_match.group(1), "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
-
-                for m in matches:
-                    if not m["date"]:
-                        continue
-                    try:
-                        match_dt = datetime.fromisoformat(m["date"].replace("Z", "+00:00"))
-                    except Exception:
-                        continue
-                    # Match within 30 minutes of each other
-                    if abs((match_dt - event_dt).total_seconds()) < 1800:
-                        t0 = de_name(m["team0"])
-                        t1 = de_name(m["team1"])
-                        f0 = flag(t0)
-                        f1 = flag(t1)
-
-                        # Replace generic summary with real teams
-                        # Keep the round label (e.g. "⚽ Sechzehntelfinale –")
-                        round_match = re.match(r"^([^–-]+[–-])", summary)
-                        if round_match:
-                            prefix = round_match.group(1).strip()
-                            new_summary = f"{prefix} {f0} {t0} vs. {f1} {t1}"
-                        else:
-                            new_summary = f"{summary} | {f0} {t0} vs. {f1} {t1}"
-
-                        block = block.replace(f"SUMMARY:{summary}", f"SUMMARY:{new_summary}", 1)
-
-                        if desc:
-                            # Update description too
-                            new_desc = re.sub(
-                                r"(Sieger Match \d+|Zweiter Gruppe [A-Z]|Sieger Gruppe [A-Z]|Bester Dritter[^\\]*)",
-                                "",
-                                desc,
-                            )
-                            teams_line = f"{f0} {t0} vs. {f1} {t1}"
-                            new_desc = re.sub(r"(Gruppe [A-Z][^\\]*\\n)", f"\\1{teams_line}\\n", new_desc, count=1)
-                            if teams_line not in new_desc:
-                                new_desc = f"{teams_line}\\n" + new_desc
-                            block = block.replace(f"DESCRIPTION:{desc}", f"DESCRIPTION:{new_desc}", 1)
-
-                        print(f"  📅 Zugeordnet: {t0} vs. {t1}")
-                        changes += 1
-                        break
-
+                print(f"  ✅ {t0} {s0}-{s1} {t1}")
+                changes += 1
+                break
         return block
 
     parts = re.split(r"(BEGIN:VEVENT\n[\s\S]*?END:VEVENT\n)", content)
-    new_parts = [process_vevent(p) if p.startswith("BEGIN:VEVENT") else p for p in parts]
-    new_content = "".join(new_parts)
+    new_parts = [process(p) if p.startswith("BEGIN:VEVENT") else p for p in parts]
+    return "".join(new_parts), changes
 
-    if new_content != content:
-        with open(ICS_FILE, "w", encoding="utf-8") as f:
-            f.write(new_content)
-        print(f"\nKalender gespeichert ({changes} Änderungen).")
-        return True
+
+def fmt_dt(iso_date):
+    dt = datetime.fromisoformat(iso_date.replace("Z", "+00:00"))
+    return dt.strftime("%Y%m%dT%H%M%SZ")
+
+
+def fmt_local(iso_date):
+    dt = datetime.fromisoformat(iso_date.replace("Z", "+00:00"))
+    local = dt + timedelta(hours=2)  # MESZ
+    return local.strftime("%H:%M")
+
+
+def build_ko_summary(round_key, match, team0_known, team1_known):
+    label = ROUND_LABELS[round_key]
+    if team0_known and team1_known:
+        t0, t1 = de_name(match["team0"]), de_name(match["team1"])
+        f0, f1 = flag(t0), flag(t1)
+        suffix = ""
+        if match["state"] == "post":
+            suffix = f" ✅ {match['score0']}:{match['score1']}"
+        return f"{label} – {f0} {t0} vs. {f1} {t1}{suffix}"
     else:
-        print("\nKeine Änderungen.")
-        return False
+        city = match["venue_city"].split(",")[0] if match["venue_city"] else ""
+        return f"{label}" + (f" – {city}" if city else "")
+
+
+def update_knockout_stage(content, ko_matches):
+    """Positionally replace each knockout VEVENT with real ESPN fixture data."""
+    if len(ko_matches) != len(KO_UIDS):
+        print(f"  ⚠ Knockout count mismatch: expected {len(KO_UIDS)}, got {len(ko_matches)} — skipping rebuild.")
+        return content, 0
+
+    changes = 0
+    for uid, match in zip(KO_UIDS, ko_matches):
+        round_key = uid.split("-")[1] if "r32" in uid or "r16" in uid or "qf" in uid or "sf" in uid else (
+            "3rd" if "3rd" in uid else "final"
+        )
+
+        block_pattern = re.compile(
+            rf"(BEGIN:VEVENT\nUID:{re.escape(uid)}\n)([\s\S]*?)(END:VEVENT\n)"
+        )
+        block_match = block_pattern.search(content)
+        if not block_match:
+            continue
+
+        body = block_match.group(2)
+
+        team0_known = "Round of" not in match["team0"] and "Winner" not in match["team0"] and "Loser" not in match["team0"]
+        team1_known = "Round of" not in match["team1"] and "Winner" not in match["team1"] and "Loser" not in match["team1"]
+
+        new_summary = build_ko_summary(round_key, match, team0_known, team1_known)
+        dtstart = fmt_dt(match["date"])
+        dt_obj = datetime.strptime(dtstart, "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
+        dtend = (dt_obj + timedelta(hours=2)).strftime("%Y%m%dT%H%M%SZ")
+        local_time = fmt_local(match["date"])
+
+        venue = match["venue_name"] or "TBD"
+        city = match["venue_city"] or ""
+        location = f"{venue}, {city}" if city else venue
+
+        if team0_known and team1_known:
+            t0, t1 = de_name(match["team0"]), de_name(match["team1"])
+            matchup = f"{t0} vs. {t1}"
+            if match["state"] == "post":
+                matchup += f" — ERGEBNIS {match['score0']}:{match['score1']} ✅"
+        else:
+            matchup = "Paarung noch nicht final"
+
+        new_desc = f"{matchup}\\nAnpfiff: {local_time} Uhr MESZ\\nStadion: {location}"
+
+        new_body = re.sub(r"^SUMMARY:.+$", f"SUMMARY:{new_summary}", body, count=1, flags=re.MULTILINE)
+        new_body = re.sub(r"^DTSTART:.+$", f"DTSTART:{dtstart}", new_body, count=1, flags=re.MULTILINE)
+        new_body = re.sub(r"^DTEND:.+$", f"DTEND:{dtend}", new_body, count=1, flags=re.MULTILINE)
+        new_body = re.sub(r"^DESCRIPTION:.+$", f"DESCRIPTION:{new_desc}", new_body, count=1, flags=re.MULTILINE)
+        new_body = re.sub(r"^LOCATION:.+$", f"LOCATION:{location}", new_body, count=1, flags=re.MULTILINE)
+
+        if new_body != body:
+            content = content.replace(body, new_body, 1)
+            changes += 1
+            print(f"  📅 {uid}: {new_summary}")
+
+    return content, changes
 
 
 if __name__ == "__main__":
-    print("Lade WM 2026 Spieldaten von ESPN...")
-    matches = fetch_all_matches()
-    completed = [m for m in matches if m["state"] == "post"]
-    scheduled = [m for m in matches if m["state"] in ("pre", "in")]
-    print(f"\n{len(completed)} abgeschlossene Spiele, {len(scheduled)} geplante/laufende Spiele\n")
-    update_ics(matches)
+    print("Lade WM 2026 Spieldaten von ESPN...\n")
+
+    print("Gruppenphase:")
+    group_matches = fetch_range(
+        datetime(2026, 6, 12, tzinfo=timezone.utc),
+        min(datetime.now(timezone.utc), datetime(2026, 6, 27, tzinfo=timezone.utc)),
+    )
+
+    print("\nK.o.-Runde:")
+    ko_matches_raw = fetch_range(
+        datetime(2026, 6, 28, tzinfo=timezone.utc),
+        datetime(2026, 7, 19, tzinfo=timezone.utc),
+    )
+    ko_matches = sorted(ko_matches_raw, key=lambda m: m["date"])
+
+    with open(ICS_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    content, c1 = update_group_stage(content, group_matches)
+    content, c2 = update_knockout_stage(content, ko_matches)
+
+    with open(ICS_FILE, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    print(f"\nFertig: {c1} Gruppenspiel-Updates, {c2} K.o.-Runde-Updates.")
