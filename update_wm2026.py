@@ -112,15 +112,22 @@ def fetch_matches_for_date(date_str):
             continue
         c0, c1 = competitors[0], competitors[1]
         venue = comp.get("venue", {})
+        notes = comp.get("notes", [])
+        pens_note = next((n.get("text", "") for n in notes if "penalt" in n.get("text", "").lower()), "")
         matches.append({
             "state": state,
             "team0": c0.get("team", {}).get("displayName", ""),
             "score0": c0.get("score", ""),
+            "shootout0": c0.get("shootoutScore"),
+            "winner0": c0.get("winner", False),
             "team1": c1.get("team", {}).get("displayName", ""),
             "score1": c1.get("score", ""),
+            "shootout1": c1.get("shootoutScore"),
+            "winner1": c1.get("winner", False),
             "date": event.get("date", ""),
             "venue_name": venue.get("fullName", ""),
             "venue_city": venue.get("address", {}).get("city", ""),
+            "pens_note": pens_note,
         })
     return matches
 
@@ -196,6 +203,22 @@ def fmt_local(iso_date):
     return local.strftime("%H:%M")
 
 
+def pens_suffix(match):
+    """Return ' n.E. X:Y' if the match went to penalties, else ''."""
+    if match.get("shootout0") is not None and match.get("shootout1") is not None:
+        return f" n.E. {match['shootout0']}:{match['shootout1']}"
+    return ""
+
+
+def winner_name(match):
+    """German name of the winning team, or None if not decided / no winner flag."""
+    if match.get("winner0"):
+        return de_name(match["team0"])
+    if match.get("winner1"):
+        return de_name(match["team1"])
+    return None
+
+
 def build_ko_summary(round_key, match, team0_known, team1_known):
     label = ROUND_LABELS[round_key]
     if team0_known and team1_known:
@@ -203,7 +226,10 @@ def build_ko_summary(round_key, match, team0_known, team1_known):
         f0, f1 = flag(t0), flag(t1)
         suffix = ""
         if match["state"] == "post":
-            suffix = f" ✅ {match['score0']}:{match['score1']}"
+            suffix = f" ✅ {match['score0']}:{match['score1']}{pens_suffix(match)}"
+            winner = winner_name(match)
+            if winner:
+                suffix += f" → {winner}"
         return f"{label} – {f0} {t0} vs. {f1} {t1}{suffix}"
     else:
         city = match["venue_city"].split(",")[0] if match["venue_city"] else ""
@@ -248,7 +274,10 @@ def update_knockout_stage(content, ko_matches):
             t0, t1 = de_name(match["team0"]), de_name(match["team1"])
             matchup = f"{t0} vs. {t1}"
             if match["state"] == "post":
-                matchup += f" — ERGEBNIS {match['score0']}:{match['score1']} ✅"
+                matchup += f" — ERGEBNIS {match['score0']}:{match['score1']}{pens_suffix(match)} ✅"
+                winner = winner_name(match)
+                if winner:
+                    matchup += f" | {winner} zieht weiter"
         else:
             matchup = "Paarung noch nicht final"
 
