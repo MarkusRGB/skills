@@ -446,6 +446,8 @@ Anpfiff: 21:00 Uhr MESZ
 Stadion: SoFi Stadium, Inglewood, California
 Anpfiff: 21:00 Uhr MESZ
 Stadion: SoFi Stadium, Inglewood, California
+Anpfiff: 21:00 Uhr MESZ
+Stadion: SoFi Stadium, Inglewood, California
 LOCATION:SoFi Stadium, Inglewood, California
 END:VEVENT
 
@@ -455,6 +457,8 @@ SUMMARY:⚽ Sechzehntelfinale – 🇧🇷 Brasilien vs. 🇯🇵 Japan ✅ 2:1 
 DTSTART:20260629T170000Z
 DTEND:20260629T190000Z
 DESCRIPTION:Brasilien vs. Japan — ERGEBNIS 2:1 ✅ | Brasilien zieht weiter
+Anpfiff: 19:00 Uhr MESZ
+Stadion: NRG Stadium, Houston, Texas
 Anpfiff: 19:00 Uhr MESZ
 Stadion: NRG Stadium, Houston, Texas
 Anpfiff: 19:00 Uhr MESZ
@@ -532,6 +536,8 @@ Anpfiff: 22:30 Uhr MESZ
 Stadion: Gillette Stadium, Foxborough, Massachusetts
 Anpfiff: 22:30 Uhr MESZ
 Stadion: Gillette Stadium, Foxborough, Massachusetts
+Anpfiff: 22:30 Uhr MESZ
+Stadion: Gillette Stadium, Foxborough, Massachusetts
 LOCATION:Gillette Stadium, Foxborough, Massachusetts
 END:VEVENT
 
@@ -541,6 +547,8 @@ SUMMARY:⚽ Sechzehntelfinale – 🇳🇱 Niederlande vs. 🇲🇦 Marokko ✅ 
 DTSTART:20260630T010000Z
 DTEND:20260630T030000Z
 DESCRIPTION:Niederlande vs. Marokko — ERGEBNIS 1:1 n.E. 2:3 ✅ | Marokko zieht weiter
+Anpfiff: 03:00 Uhr MESZ
+Stadion: Estadio BBVA, Guadalupe
 Anpfiff: 03:00 Uhr MESZ
 Stadion: Estadio BBVA, Guadalupe
 Anpfiff: 03:00 Uhr MESZ
@@ -618,6 +626,8 @@ Anpfiff: 19:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
 Anpfiff: 19:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
+Anpfiff: 19:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
 LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
@@ -661,6 +671,8 @@ Anpfiff: 23:00 Uhr MESZ
 Stadion: MetLife Stadium, East Rutherford, New Jersey
 Anpfiff: 23:00 Uhr MESZ
 Stadion: MetLife Stadium, East Rutherford, New Jersey
+Anpfiff: 23:00 Uhr MESZ
+Stadion: MetLife Stadium, East Rutherford, New Jersey
 LOCATION:MetLife Stadium, East Rutherford, New Jersey
 END:VEVENT
 
@@ -670,6 +682,8 @@ SUMMARY:⚽ Sechzehntelfinale – 🇲🇽 Mexiko vs. 🇪🇨 Ecuador ✅ 2:0 �
 DTSTART:20260701T020000Z
 DTEND:20260701T040000Z
 DESCRIPTION:Mexiko vs. Ecuador — ERGEBNIS 2:0 ✅ | Mexiko zieht weiter
+Anpfiff: 04:00 Uhr MESZ
+Stadion: Estadio Banorte, Mexico City
 Anpfiff: 04:00 Uhr MESZ
 Stadion: Estadio Banorte, Mexico City
 Anpfiff: 04:00 Uhr MESZ
@@ -747,6 +761,8 @@ Anpfiff: 18:00 Uhr MESZ
 Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
 Anpfiff: 18:00 Uhr MESZ
 Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
+Anpfiff: 18:00 Uhr MESZ
+Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
 LOCATION:Mercedes-Benz Stadium, Atlanta, Georgia
 END:VEVENT
 
@@ -790,15 +806,19 @@ Anpfiff: 22:00 Uhr MESZ
 Stadion: Lumen Field, Seattle, Washington
 Anpfiff: 22:00 Uhr MESZ
 Stadion: Lumen Field, Seattle, Washington
+Anpfiff: 22:00 Uhr MESZ
+Stadion: Lumen Field, Seattle, Washington
 LOCATION:Lumen Field, Seattle, Washington
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r32-10@radlgruber
-SUMMARY:⚽ Sechzehntelfinale – 🇺🇸 USA vs. 🇧🇦 Bosnien-Herzegowina
+SUMMARY:⚽ Sechzehntelfinale – 🇺🇸 USA vs. 🇧🇦 Bosnien-Herzegowina ✅ 2:0 → USA
 DTSTART:20260702T000000Z
 DTEND:20260702T020000Z
-DESCRIPTION:USA vs. Bosnien-Herzegowina
+DESCRIPTION:USA vs. Bosnien-Herzegowina — ERGEBNIS 2:0 ✅ | USA zieht weiter
+Anpfiff: 02:00 Uhr MESZ
+Stadion: Levi's Stadium, Santa Clara, California
 Anpfiff: 02:00 Uhr MESZ
 Stadion: Levi's Stadium, Santa Clara, California
 Anpfiff: 02:00 Uhr MESZ
@@ -876,6 +896,8 @@ Anpfiff: 21:00 Uhr MESZ
 Stadion: SoFi Stadium, Inglewood, California
 Anpfiff: 21:00 Uhr MESZ
 Stadion: SoFi Stadium, Inglewood, California
+Anpfiff: 21:00 Uhr MESZ
+Stadion: SoFi Stadium, Inglewood, California
 LOCATION:SoFi Stadium, Inglewood, California
 END:VEVENT
 
@@ -885,6 +907,8 @@ SUMMARY:⚽ Sechzehntelfinale – 🇵🇹 Portugal vs. 🇭🇷 Kroatien
 DTSTART:20260702T230000Z
 DTEND:20260703T010000Z
 DESCRIPTION:Portugal vs. Kroatien
+Anpfiff: 01:00 Uhr MESZ
+Stadion: BMO Field, Toronto
 Anpfiff: 01:00 Uhr MESZ
 Stadion: BMO Field, Toronto
 Anpfiff: 01:00 Uhr MESZ
@@ -962,6 +986,8 @@ Anpfiff: 05:00 Uhr MESZ
 Stadion: BC Place, Vancouver
 Anpfiff: 05:00 Uhr MESZ
 Stadion: BC Place, Vancouver
+Anpfiff: 05:00 Uhr MESZ
+Stadion: BC Place, Vancouver
 LOCATION:BC Place, Vancouver
 END:VEVENT
 
@@ -971,6 +997,8 @@ SUMMARY:⚽ Sechzehntelfinale – 🇦🇺 Australien vs. 🇪🇬 Ägypten
 DTSTART:20260703T180000Z
 DTEND:20260703T200000Z
 DESCRIPTION:Australien vs. Ägypten
+Anpfiff: 20:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
 Anpfiff: 20:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
 Anpfiff: 20:00 Uhr MESZ
@@ -1048,6 +1076,8 @@ Anpfiff: 00:00 Uhr MESZ
 Stadion: Hard Rock Stadium, Miami Gardens, Florida
 Anpfiff: 00:00 Uhr MESZ
 Stadion: Hard Rock Stadium, Miami Gardens, Florida
+Anpfiff: 00:00 Uhr MESZ
+Stadion: Hard Rock Stadium, Miami Gardens, Florida
 LOCATION:Hard Rock Stadium, Miami Gardens, Florida
 END:VEVENT
 
@@ -1057,6 +1087,8 @@ SUMMARY:⚽ Sechzehntelfinale – 🇨🇴 Kolumbien vs. 🇬🇭 Ghana
 DTSTART:20260704T013000Z
 DTEND:20260704T033000Z
 DESCRIPTION:Kolumbien vs. Ghana
+Anpfiff: 03:30 Uhr MESZ
+Stadion: GEHA Field at Arrowhead Stadium, Kansas City, Missouri
 Anpfiff: 03:30 Uhr MESZ
 Stadion: GEHA Field at Arrowhead Stadium, Kansas City, Missouri
 Anpfiff: 03:30 Uhr MESZ
@@ -1134,6 +1166,8 @@ Anpfiff: 19:00 Uhr MESZ
 Stadion: NRG Stadium, Houston, Texas
 Anpfiff: 19:00 Uhr MESZ
 Stadion: NRG Stadium, Houston, Texas
+Anpfiff: 19:00 Uhr MESZ
+Stadion: NRG Stadium, Houston, Texas
 LOCATION:NRG Stadium, Houston, Texas
 END:VEVENT
 
@@ -1143,6 +1177,8 @@ SUMMARY:🔥 Achtelfinale – 🇵🇾 Paraguay vs. 🇫🇷 Frankreich
 DTSTART:20260704T210000Z
 DTEND:20260704T230000Z
 DESCRIPTION:Paraguay vs. Frankreich
+Anpfiff: 23:00 Uhr MESZ
+Stadion: Lincoln Financial Field, Philadelphia, Pennsylvania
 Anpfiff: 23:00 Uhr MESZ
 Stadion: Lincoln Financial Field, Philadelphia, Pennsylvania
 Anpfiff: 23:00 Uhr MESZ
@@ -1220,6 +1256,8 @@ Anpfiff: 22:00 Uhr MESZ
 Stadion: MetLife Stadium, East Rutherford, New Jersey
 Anpfiff: 22:00 Uhr MESZ
 Stadion: MetLife Stadium, East Rutherford, New Jersey
+Anpfiff: 22:00 Uhr MESZ
+Stadion: MetLife Stadium, East Rutherford, New Jersey
 LOCATION:MetLife Stadium, East Rutherford, New Jersey
 END:VEVENT
 
@@ -1229,6 +1267,8 @@ SUMMARY:🔥 Achtelfinale – 🇲🇽 Mexiko vs. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 E
 DTSTART:20260706T000000Z
 DTEND:20260706T020000Z
 DESCRIPTION:Mexiko vs. England
+Anpfiff: 02:00 Uhr MESZ
+Stadion: Estadio Banorte, Mexico City
 Anpfiff: 02:00 Uhr MESZ
 Stadion: Estadio Banorte, Mexico City
 Anpfiff: 02:00 Uhr MESZ
@@ -1306,15 +1346,19 @@ Anpfiff: 21:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
 Anpfiff: 21:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
+Anpfiff: 21:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
 LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
 BEGIN:VEVENT
 UID:wm2026-r16-06@radlgruber
-SUMMARY:🔥 Achtelfinale – Seattle
+SUMMARY:🔥 Achtelfinale – 🇺🇸 USA vs. 🇧🇪 Belgien
 DTSTART:20260707T000000Z
 DTEND:20260707T020000Z
-DESCRIPTION:Paarung noch nicht final
+DESCRIPTION:USA vs. Belgien
+Anpfiff: 02:00 Uhr MESZ
+Stadion: Lumen Field, Seattle, Washington
 Anpfiff: 02:00 Uhr MESZ
 Stadion: Lumen Field, Seattle, Washington
 Anpfiff: 02:00 Uhr MESZ
@@ -1392,6 +1436,8 @@ Anpfiff: 18:00 Uhr MESZ
 Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
 Anpfiff: 18:00 Uhr MESZ
 Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
+Anpfiff: 18:00 Uhr MESZ
+Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
 LOCATION:Mercedes-Benz Stadium, Atlanta, Georgia
 END:VEVENT
 
@@ -1401,6 +1447,8 @@ SUMMARY:🔥 Achtelfinale – Vancouver
 DTSTART:20260707T200000Z
 DTEND:20260707T220000Z
 DESCRIPTION:Paarung noch nicht final
+Anpfiff: 22:00 Uhr MESZ
+Stadion: BC Place, Vancouver
 Anpfiff: 22:00 Uhr MESZ
 Stadion: BC Place, Vancouver
 Anpfiff: 22:00 Uhr MESZ
@@ -1478,6 +1526,8 @@ Anpfiff: 22:00 Uhr MESZ
 Stadion: Gillette Stadium, Foxborough, Massachusetts
 Anpfiff: 22:00 Uhr MESZ
 Stadion: Gillette Stadium, Foxborough, Massachusetts
+Anpfiff: 22:00 Uhr MESZ
+Stadion: Gillette Stadium, Foxborough, Massachusetts
 LOCATION:Gillette Stadium, Foxborough, Massachusetts
 END:VEVENT
 
@@ -1487,6 +1537,8 @@ SUMMARY:🏅 VIERTELFINALE – Inglewood
 DTSTART:20260710T190000Z
 DTEND:20260710T210000Z
 DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: SoFi Stadium, Inglewood, California
 Anpfiff: 21:00 Uhr MESZ
 Stadion: SoFi Stadium, Inglewood, California
 Anpfiff: 21:00 Uhr MESZ
@@ -1564,6 +1616,8 @@ Anpfiff: 23:00 Uhr MESZ
 Stadion: Hard Rock Stadium, Miami Gardens, Florida
 Anpfiff: 23:00 Uhr MESZ
 Stadion: Hard Rock Stadium, Miami Gardens, Florida
+Anpfiff: 23:00 Uhr MESZ
+Stadion: Hard Rock Stadium, Miami Gardens, Florida
 LOCATION:Hard Rock Stadium, Miami Gardens, Florida
 END:VEVENT
 
@@ -1573,6 +1627,8 @@ SUMMARY:🏅 VIERTELFINALE – Kansas City
 DTSTART:20260712T010000Z
 DTEND:20260712T030000Z
 DESCRIPTION:Paarung noch nicht final
+Anpfiff: 03:00 Uhr MESZ
+Stadion: GEHA Field at Arrowhead Stadium, Kansas City, Missouri
 Anpfiff: 03:00 Uhr MESZ
 Stadion: GEHA Field at Arrowhead Stadium, Kansas City, Missouri
 Anpfiff: 03:00 Uhr MESZ
@@ -1650,6 +1706,8 @@ Anpfiff: 21:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
 Anpfiff: 21:00 Uhr MESZ
 Stadion: AT&T Stadium, Arlington, Texas
+Anpfiff: 21:00 Uhr MESZ
+Stadion: AT&T Stadium, Arlington, Texas
 LOCATION:AT&T Stadium, Arlington, Texas
 END:VEVENT
 
@@ -1659,6 +1717,8 @@ SUMMARY:🔴 HALBFINALE – Atlanta
 DTSTART:20260715T190000Z
 DTEND:20260715T210000Z
 DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
 Anpfiff: 21:00 Uhr MESZ
 Stadion: Mercedes-Benz Stadium, Atlanta, Georgia
 Anpfiff: 21:00 Uhr MESZ
@@ -1736,6 +1796,8 @@ Anpfiff: 23:00 Uhr MESZ
 Stadion: Hard Rock Stadium, Miami Gardens, Florida
 Anpfiff: 23:00 Uhr MESZ
 Stadion: Hard Rock Stadium, Miami Gardens, Florida
+Anpfiff: 23:00 Uhr MESZ
+Stadion: Hard Rock Stadium, Miami Gardens, Florida
 LOCATION:Hard Rock Stadium, Miami Gardens, Florida
 END:VEVENT
 
@@ -1745,6 +1807,8 @@ SUMMARY:🏆 WM 2026 FINALE – East Rutherford
 DTSTART:20260719T190000Z
 DTEND:20260719T210000Z
 DESCRIPTION:Paarung noch nicht final
+Anpfiff: 21:00 Uhr MESZ
+Stadion: MetLife Stadium, East Rutherford, New Jersey
 Anpfiff: 21:00 Uhr MESZ
 Stadion: MetLife Stadium, East Rutherford, New Jersey
 Anpfiff: 21:00 Uhr MESZ
