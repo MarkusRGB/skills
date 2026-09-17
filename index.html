@@ -184,15 +184,15 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <a href="#c-research-analyse" class="nav-link">Research &amp; Analyse <span class="nav-cnt">5</span></a>
 <a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">17</span></a>
 <a href="#c-netzwerk-diagnose" class="nav-link">Netzwerk &amp; Diagnose <span class="nav-cnt">6</span></a>
-<a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">4</span></a>
+<a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">5</span></a>
 <a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">15</span></a>
 
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 08.07.2026 16:58 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 17.09.2026 13:14 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">175</b></div>
+  <div class="stat">Skills <b id="cnt">176</b></div>
   <div class="stat">Kategorien <b>16</b></div>
   <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false" aria-label="Skills suchen" role="searchbox"/>
   <div class="ts" role="group" aria-label="Farbschema">
@@ -415,7 +415,8 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 </div>
 <div class="category" id="c-seo-custom-skills" data-cat>
 <div class="cat-title">SEO &amp; Custom Skills</div>
-<div class="grid"><div class="card"><div class="n">/local-seo-onpage</div><div class="d">On-Page-SEO-Checkliste für lokale Dienstleistungswebsites: Meta-Titel, Dateinamen, Struktur.</div></div>
+<div class="grid"><div class="card"><div class="n">/kooby-customer-demo</div><div class="d">Zugeschnittene kooby-Kundendemo aufsetzen: Recherche, Design, Testinstanz auf demo.kooby.at befüllen, Kundenlink verschicken.</div></div>
+<div class="card"><div class="n">/local-seo-onpage</div><div class="d">On-Page-SEO-Checkliste für lokale Dienstleistungswebsites: Meta-Titel, Dateinamen, Struktur.</div></div>
 <div class="card"><div class="n">/markus-sqlite-cms</div><div class="d">HTML-Seiten in ein PHP/SQLite-CMS umwandeln: sections_map, DB-Seeding, Drag-and-Drop-Reorder, Mobile-Breakpoints.</div></div>
 <div class="card"><div class="n">/markus-website-struktur</div><div class="d">Architektur und Struktur für Markus' eigene Website-Projekte.</div></div>
 <div class="card"><div class="n">/silktide-cookie-banner</div><div class="d">DSGVO-konforme Integration des Silktide Consent Managers auf einer Website.</div></div>
@@ -465,7 +466,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:175);
+  document.getElementById('cnt').textContent=n||(q?0:176);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
