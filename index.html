@@ -182,7 +182,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <a href="#c-payments-web3" class="nav-link">Payments &amp; Web3 <span class="nav-cnt">6</span></a>
 <a href="#c-firecrawl" class="nav-link">Firecrawl (Web Scraping &amp; Research) <span class="nav-cnt">13</span></a>
 <a href="#c-research-analyse" class="nav-link">Research &amp; Analyse <span class="nav-cnt">5</span></a>
-<a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">38</span></a>
+<a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">39</span></a>
 <a href="#c-netzwerk-diagnose" class="nav-link">Netzwerk &amp; Diagnose <span class="nav-cnt">6</span></a>
 <a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">5</span></a>
 <a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">15</span></a>
@@ -190,9 +190,9 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 07.11.2026 10:04 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 07.11.2026 10:11 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">205</b></div>
+  <div class="stat">Skills <b id="cnt">206</b></div>
   <div class="stat">Kategorien <b>16</b></div>
   <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false" aria-label="Skills suchen" role="searchbox"/>
   <div class="ts" role="group" aria-label="Farbschema">
@@ -400,6 +400,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <div class="card"><div class="n">/adobe-expand-image</div><div class="d">Offizieller Adobe-Skill: Foto mit Firefly Generative Expand auf ein neues Format erweitern, ohne Zuschnitt.</div></div>
 <div class="card"><div class="n">/adobe-fonts</div><div class="d">Offizieller Adobe-Skill: Adobe Fonts suchen, vergleichen und als Schriftprobe ansehen.</div></div>
 <div class="card"><div class="n">/adobe-resize-photos-and-videos</div><div class="d">Offizieller Adobe-Skill: Fotos und Videos auf exakte Pixelmaße oder Seitenverhältnisse bringen.</div></div>
+<div class="card"><div class="n">/adobe-retouch-portraits</div><div class="d">Offizieller Adobe-Skill: Porträtserien gesammelt retuschieren (Ausrichten, Tonwert, Licht).</div></div>
 <div class="card"><div class="n">/adobe-stock-search-and-license</div><div class="d">Offizieller Adobe-Skill: Adobe-Stock-Fotos, Vektoren und Videos finden, Lizenz nur nach Freigabe.</div></div>
 <div class="card"><div class="n">/answer-me-with-html</div><div class="d">Komplexe Antworten als einseitige HTML-Erklärseite: Markdown-Entwurf, das gebündelte CLI baut Layout und Diagramme.</div></div>
 <div class="card"><div class="n">/capture-screen</div><div class="d">Programmatische Screenshots auf macOS mit Swift CGWindowListCopyWindowInfo.</div></div>
@@ -495,7 +496,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:205);
+  document.getElementById('cnt').textContent=n||(q?0:206);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
