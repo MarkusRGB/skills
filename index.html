@@ -182,7 +182,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <a href="#c-payments-web3" class="nav-link">Payments &amp; Web3 <span class="nav-cnt">6</span></a>
 <a href="#c-firecrawl" class="nav-link">Firecrawl (Web Scraping &amp; Research) <span class="nav-cnt">13</span></a>
 <a href="#c-research-analyse" class="nav-link">Research &amp; Analyse <span class="nav-cnt">5</span></a>
-<a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">39</span></a>
+<a href="#c-tools-automatisierung" class="nav-link">Tools &amp; Automatisierung <span class="nav-cnt">45</span></a>
 <a href="#c-netzwerk-diagnose" class="nav-link">Netzwerk &amp; Diagnose <span class="nav-cnt">6</span></a>
 <a href="#c-seo-custom-skills" class="nav-link">SEO &amp; Custom Skills <span class="nav-cnt">5</span></a>
 <a href="#c-weitere-skills" class="nav-link">Weitere Skills <span class="nav-cnt">15</span></a>
@@ -190,9 +190,9 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 07.11.2026 10:11 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 11.11.2026 09:57 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">206</b></div>
+  <div class="stat">Skills <b id="cnt">212</b></div>
   <div class="stat">Kategorien <b>16</b></div>
   <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false" aria-label="Skills suchen" role="searchbox"/>
   <div class="ts" role="group" aria-label="Farbschema">
@@ -425,6 +425,12 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <div class="card"><div class="n">/ponytail-review</div><div class="d">Review einer Änderung: Logik, Sicherheit, Last, Tests, ist jede Zeile nötig.</div></div>
 <div class="card"><div class="n">/repomix-safe-mixer</div><div class="d">Codebases sicher mit repomix verpacken – Credentials vorher automatisch entfernen.</div></div>
 <div class="card"><div class="n">/repomix-unmixer</div><div class="d">Dateien aus repomix-gepackten Repos extrahieren und Original-Struktur wiederherstellen.</div></div>
+<div class="card"><div class="n">/sepia</div><div class="d">KI-Texte menschlich klingen lassen: Erzählstruktur bei Fiktion, Fachregeln für Release Notes, Ankündigungen, Antworten.</div></div>
+<div class="card"><div class="n">/sepia-hemingway</div><div class="d">Sepia: Fiktion im Stil Hemingways schreiben oder überarbeiten.</div></div>
+<div class="card"><div class="n">/sepia-recreate</div><div class="d">Sepia: Text vollständig neu schreiben.</div></div>
+<div class="card"><div class="n">/sepia-refactor</div><div class="d">Sepia: minimale Überarbeitung direkt im bestehenden Text.</div></div>
+<div class="card"><div class="n">/sepia-review</div><div class="d">Sepia: Text auf KI-Muster prüfen, ohne ihn zu ändern.</div></div>
+<div class="card"><div class="n">/sepia-write</div><div class="d">Sepia: neuen Text von Grund auf ohne KI-Muster schreiben.</div></div>
 <div class="card"><div class="n">/slides-creator</div><div class="d">Narrative-First Slide Decks: strukturierte Erzählung nach ABCDEFG-Modell.</div></div>
 <div class="card"><div class="n">/teams-channel-post-writer</div><div class="d">Lehrreiche Teams-Channel-Posts über Claude Code Features für internes Knowledge Sharing.</div></div>
 <div class="card"><div class="n">/technical-svg-diagrams</div><div class="d">Saubere, minimale technische SVG-Diagramme im Cloudflare-Stil generieren.</div></div>
@@ -496,7 +502,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:206);
+  document.getElementById('cnt').textContent=n||(q?0:212);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
