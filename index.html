@@ -170,7 +170,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <body>
 <aside aria-label="Kategorien-Navigation">
 <h2 aria-hidden="true">Kategorien</h2>
-<a href="#c-ui-ux-design" class="nav-link">UI/UX Design <span class="nav-cnt">27</span></a>
+<a href="#c-ui-ux-design" class="nav-link">UI/UX Design <span class="nav-cnt">28</span></a>
 <a href="#c-ux-research-strategie" class="nav-link">UX Research &amp; Strategie <span class="nav-cnt">16</span></a>
 <a href="#c-brand-design-referenzen" class="nav-link">Brand &amp; Design Referenzen <span class="nav-cnt">4</span></a>
 <a href="#c-frontend-javascript" class="nav-link">Frontend &amp; JavaScript <span class="nav-cnt">17</span></a>
@@ -190,9 +190,9 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 </aside>
 <main>
 <h1>Claude Code — Skills</h1>
-<p class="meta">Aktualisiert: 11.11.2026 09:57 · Auto-generiert aus ~/.claude/skills/</p>
+<p class="meta">Aktualisiert: 13.11.2026 12:42 · Auto-generiert aus ~/.claude/skills/</p>
 <div class="bar">
-  <div class="stat">Skills <b id="cnt">212</b></div>
+  <div class="stat">Skills <b id="cnt">213</b></div>
   <div class="stat">Kategorien <b>16</b></div>
   <input id="q" type="text" placeholder="Skill suchen …" oninput="f()" autocomplete="off" spellcheck="false" aria-label="Skills suchen" role="searchbox"/>
   <div class="ts" role="group" aria-label="Farbschema">
@@ -215,6 +215,7 @@ h1{font-size:1.35rem;font-weight:600;letter-spacing:-.022em;color:var(--tx-h1);m
 <div class="card"><div class="n">/enhance-prompt</div><div class="d">Vage UI-Ideen in präzise, Stitch-optimierte Prompts umwandeln.</div></div>
 <div class="card"><div class="n">/frontend-design</div><div class="d">Unverwechselbare, produktionsreife Frontend-Interfaces mit hoher Designqualität erstellen.</div></div>
 <div class="card"><div class="n">/gpt-tasteskill</div><div class="d">Elite UX/UI mit Advanced GSAP Motion – Python-gesteuerte Randomisierung, AIDA-Prinzipien.</div></div>
+<div class="card"><div class="n">/hallmark</div><div class="d">Gegen KI-Einheitsdesign: neue Websites und Seiten, die gestaltet statt generiert wirken; auch redesign und audit.</div></div>
 <div class="card"><div class="n">/interaction-motion-design</div><div class="d">Micro-Interaction-Patterns, Animations-Timing, Übergänge, Haptik-Design.</div></div>
 <div class="card"><div class="n">/minimalist-skill</div><div class="d">Saubere, editorische Interfaces: warme Monochrom-Palette, typografischer Kontrast, flache Bento-Grids.</div></div>
 <div class="card"><div class="n">/output-skill</div><div class="d">Überschreibt LLM-Abkürzungsverhalten – erzwingt vollständige Code-Generierung ohne Platzhalter.</div></div>
@@ -502,7 +503,7 @@ function f(){
     cat.classList.toggle('hidden',!hit);
     if(hit)n+=cat.querySelectorAll('.card:not(.hidden)').length;
   });
-  document.getElementById('cnt').textContent=n||(q?0:212);
+  document.getElementById('cnt').textContent=n||(q?0:213);
   var el=document.getElementById('none');
   el.style.display=(!n&&q)?'block':'none';
   if(!n&&q)el.textContent='Kein Skill gefunden für „'+q+'“';
